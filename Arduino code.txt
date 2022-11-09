@@ -1,0 +1,25 @@
+Arduino code for motor control:
+
+Load all relevant libraries (motor drivers)
+
+Define the motors steps RPM and sleep pin
+determine intrupt pin for break when motor reachs button
+Define microsteps
+
+
+manual control:
+- Move motor back and forth to determine the position for whisker contact
+- rotate motor to the object
+- manually detrmine initial position with no object
+- if needed detrmine distance for catch trails
+- define position of the objects (starting from non at 0 angle and moving clockwise positive degree)
+
+automated control:
+create random for spins clockwise and counterclockwise until reaching the desired object
+choose randomly between the two position of the specific object 
+move motor away from object
+send feedback when motor reach position
+rotate motor
+send feedback when motor reachs position
+send pulses with object identity (1 - Aluminum 2 - Attenuated 3 - no object)
+
