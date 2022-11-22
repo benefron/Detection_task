@@ -5,6 +5,7 @@ Load all relevant libraries (motor drivers)
 Define the motors steps RPM and sleep pin
 determine intrupt pin for break when motor reachs button
 Define microsteps
+Define all inputs from control teensy
 
 
 manual control:
