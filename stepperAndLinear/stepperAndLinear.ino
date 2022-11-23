@@ -29,8 +29,8 @@ BasicStepperDriver linnear(MOTOR_STEPS, DIR_L, STEP_L,SLEEP_L);
 BasicStepperDriver stepper(MOTOR_STEPS, DIR, STEP,SLEEP);
 int randAr[6] = {1,2,3,1,2,3};
 int countAll = 0;
-int myrand1  = random(-10,10) ; // first rand number generator for motor
-int myrand2  = random(-10,10) ; // second rand number generator for motor
+int myrand1; // first rand number generator for motor
+int myrand2; // second rand number generator for motor
 int myrandmove = myrand1+myrand2 ; // sum movement of myrand1+myrand2
 //Uncomment line to use enable/disable functionality
 //BasicStepperDriver stepper(MOTOR_STEPS, DIR, STEP, SLEEP);
@@ -62,7 +62,9 @@ void setup() {
 }
 
 void loop() {
-        
+ myrand1  = random(-10,10) ; 
+ myrand2  = random(-10,10) ;
+ myrandmove = myrand1+myrand2;        
   
   int mm = 0;
   char jj;
