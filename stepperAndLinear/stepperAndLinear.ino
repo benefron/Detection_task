@@ -1,39 +1,60 @@
 
 #include <Arduino.h>
 #include "BasicStepperDriver.h"
-//#include <ezButton.h> 
+
+// Define stepper motors properties
 #define MOTOR_STEPS 200
 #define RPM 30
 #define RPM_L 300
 #define SLEEP_L 15
 #define SLEEP 2
-
-
-const byte interruptPin = 23;
-
-
 #define MICROSTEPS_L 16
-int whiskPos;
-int stepperAngle = 0;
-
-//int resetPin = 12; 
-
+#define MICROSTEPS 1
 #define DIR_L 13
 #define STEP_L 14
-BasicStepperDriver linnear(MOTOR_STEPS, DIR_L, STEP_L,SLEEP_L);
-
-#define MICROSTEPS 1
-
 #define DIR 0
 #define STEP 1
+
+//Defining the teensy pins for control using Bonsai
+#define ALUM 21
+#define ATT 20
+#define NON 19
+#define LFWD 17
+#define LBCK 22
+#define CATCH_FWD 18
+#define CATCH_BCK 16
+
+//Define the teensy pins to report back to Bonsai
+#define L_WH 11
+#define L_ST 10
+#define L_CATCH 5
+#define R_ALUM 8
+#define R_MUT 7
+#define R_NON 6
+#define R_OBJ 9
+
+// Create interrupt pin
+const byte interruptPin = 23;
+
+// intilaize motor objects
+BasicStepperDriver linnear(MOTOR_STEPS, DIR_L, STEP_L,SLEEP_L);
 BasicStepperDriver stepper(MOTOR_STEPS, DIR, STEP,SLEEP);
-int randAr[6] = {1,2,3,1,2,3};
-int countAll = 0;
-int myrand1; // first rand number generator for motor
-int myrand2; // second rand number generator for motor
+
+// initilaize variables for computation of positions
+int whiskPos; // create variable for the linear movement to whisker position
+int stepperAngle = 0; // create variable for the object stepper angle
+int myrand1; // first rand number generator for rotary stepper 
+int myrand2; // second rand number generator for rotary stepper 
 int myrandmove = myrand1+myrand2 ; // sum movement of myrand1+myrand2
-//Uncomment line to use enable/disable functionality
-//BasicStepperDriver stepper(MOTOR_STEPS, DIR, STEP, SLEEP);
+
+// define the position of the objects on the wheel
+int al_1 = 1 * 32;
+int al_2 = 3 * 32;
+int at_1 = 2 * 32;
+int at_2 = 5 * 32;  
+int no_1 = 0 * 32;
+int no_2 = 4 * 32;
+
 
 
 void setup() {
@@ -42,15 +63,12 @@ void setup() {
     linnear.setEnableActiveState(LOW);
     stepper.begin(RPM, MICROSTEPS);
     stepper.setEnableActiveState(LOW);
-    // if using enable/disable on ENABLE pin (active LOW) instead of SLEEP uncomment next line
-    // stepper.setEnableActiveState(LOW);
     stepper.enable();
     Serial.begin(115200);
     pinMode(interruptPin, INPUT_PULLDOWN);
-    pinMode(11,INPUT_PULLDOWN);
-    pinMode(21,INPUT_PULLDOWN);
-    pinMode(20,INPUT_PULLDOWN);
-    pinMode(19,INPUT_PULLDOWN);
+    pinMode(ALUM,INPUT_PULLDOWN);
+    pinMode(ATT,INPUT_PULLDOWN);
+    pinMode(NON,INPUT_PULLDOWN);
     
     pinMode(3,OUTPUT);
     randomSeed(analogRead(0));
@@ -63,15 +81,16 @@ void setup() {
    linnear.rotate(-36000);
    
    linnear.disable();
-//   stepper.rotate(1.8);
+
 }
 
 void loop() {
+    // generate random numbers to rotate motor
  myrand1  = random(-250,250) ; 
  myrand2  = random(-250,250) ;
  myrandmove = myrand1+myrand2;        
-//Serial.println(digitalRead(21));
 
+// determine the position of the linear motor at ehiskers
   int mm = 0;
   char jj;
   int rot;
@@ -102,6 +121,14 @@ void loop() {
           stepper.move(rot);
           stepperAngle = 0;
         }
+        else if(jj == 'c') // determine catch trial distance
+        {
+          String catchD = Serial.readString();
+          catchD.remove(0,1); 
+          Serial.print("catch distance");
+          Serial.println(catchD);
+          catch_dis = catchD.toInt()*180;
+        }
         else
         {
           ch = Serial.read(); 
@@ -110,22 +137,22 @@ void loop() {
         }
       
       }
+    
 
       
-      
+//    Send all teensy controlled pins to LOW so you make sure they are ready to give commands  
       digitalWrite(2,LOW);
-      digitalWrite(11,LOW);
-      digitalWrite(21,LOW);
-      digitalWrite(20,LOW);
-      digitalWrite(19,LOW);
-      digitalWrite(23,LOW);
+      digitalWrite(ALUM,LOW);
+      digitalWrite(ATT,LOW);
+      digitalWrite(NON,LOW);
+      digitalWrite(interruptPin,LOW);
 
     
       
        
 
            
-        if (ch == 'l' || digitalRead(21) == HIGH)
+        if (ch == 'l' || digitalRead(ALUM) == HIGH)
         {
           
           linnear.enable();
@@ -138,26 +165,19 @@ void loop() {
           delay(200);
           stepper.move((-myrandmove*MICROSTEPS)+(32*MICROSTEPS));       
           stepperAngle = 32*MICROSTEPS;
-//          stepper.rotate(-stepperAngle);
-//          delay(100);
-//          stepper.rotate(60);
-//          stepperAngle = 60;
           Serial.println("aluminum");
           delay(1000);
           linnear.rotate(whiskPos);
           linnear.disable();
-//          stepper.disable();
           delay(500);
           digitalWrite(3,HIGH);
           delay(100);
           digitalWrite(3,LOW);
-          digitalWrite(21,LOW);
-         
-          
-          
-          
+          digitalWrite(ALUM,LOW);
         }
-        if (ch == 'm'|| digitalRead(20) == HIGH)
+    
+    
+        if (ch == 'm'|| digitalRead(ATT) == HIGH)
         {
           
           linnear.enable();
@@ -171,14 +191,9 @@ void loop() {
           delay(200);
           stepper.move((-myrandmove*MICROSTEPS)+(64*MICROSTEPS));   
           stepperAngle = 64*MICROSTEPS;
-//          stepper.rotate(-stepperAngle);
-//          delay(100);
-//          stepper.rotate(120);
-//          stepperAngle = 120;
           Serial.println("aluminum silenced");
           delay(1000);
           linnear.rotate(whiskPos);
-//          stepper.disable();
           linnear.disable();
           digitalWrite(3,HIGH);
           delay(100);
@@ -187,11 +202,14 @@ void loop() {
           digitalWrite(3,HIGH);
           delay(100);
           digitalWrite(3,LOW);
-          digitalWrite(20,LOW);
+          digitalWrite(ATT,LOW);
          
           
         }
-        if (ch == 'n' || digitalRead(19) == HIGH)
+    
+    
+    
+        if (ch == 'n' || digitalRead(NON) == HIGH)
         {
           
           linnear.enable();
@@ -207,7 +225,6 @@ void loop() {
           Serial.println("non");
           delay(1000);
           linnear.rotate(whiskPos);
-//          stepper.disable();
           linnear.disable();
           digitalWrite(3,HIGH);
           delay(100);
@@ -220,7 +237,7 @@ void loop() {
           digitalWrite(3,HIGH);
           delay(100);
           digitalWrite(3,LOW);
-          digitalWrite(19,LOW);
+          digitalWrite(NON,LOW);
         
          
           
