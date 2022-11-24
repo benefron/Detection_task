@@ -46,7 +46,8 @@ int stepperAngle = 0; // create variable for the object stepper angle
 int myrand1; // first rand number generator for rotary stepper 
 int myrand2; // second rand number generator for rotary stepper 
 int myrandmove = myrand1+myrand2 ; // sum movement of myrand1+myrand2
-
+int randangle; // rand option between 2 stimulus.
+int randopt; // switch case for stimulus.
 // define the position of the objects on the wheel
 int al_1 = 1 * 32;
 int al_2 = 3 * 32;
@@ -88,7 +89,9 @@ void loop() {
     // generate random numbers to rotate motor
  myrand1  = random(-250,250) ; 
  myrand2  = random(-250,250) ;
- myrandmove = myrand1+myrand2;        
+ myrandmove = myrand1+myrand2;
+ // genrate random option from 2 identical stimulus.
+ randangle = random(1,3);         
 
 // determine the position of the linear motor at ehiskers
   int mm = 0;
@@ -154,7 +157,14 @@ void loop() {
            
         if (ch == 'l' || digitalRead(ALUM) == HIGH)
         {
-          
+          switch (randopt) {
+          case 1:
+          al_1 = al_1;
+          break;
+          case 2:
+          al_1 = al_2;
+          break;
+          }
           linnear.enable();
           linnear.rotate(-whiskPos);
           stepper.move(-stepperAngle);
@@ -163,8 +173,8 @@ void loop() {
           delay(200);
           stepper.move(myrand2*MICROSTEPS);
           delay(200);
-          stepper.move((-myrandmove*MICROSTEPS)+(32*MICROSTEPS));       
-          stepperAngle = 32*MICROSTEPS;
+          stepper.move((-myrandmove*MICROSTEPS)+(al_1*MICROSTEPS));       
+          stepperAngle = al_1*MICROSTEPS;
           Serial.println("aluminum");
           delay(1000);
           linnear.rotate(whiskPos);
@@ -179,7 +189,14 @@ void loop() {
     
         if (ch == 'm'|| digitalRead(ATT) == HIGH)
         {
-          
+          switch (randopt) {
+          case 1:
+          at_1 = at_1;
+          break;
+          case 2:
+          at_1 = at_2;
+          break;
+          }
           linnear.enable();
           linnear.rotate(-whiskPos);
 
@@ -189,8 +206,8 @@ void loop() {
           delay(200);
           stepper.move(myrand2*MICROSTEPS);
           delay(200);
-          stepper.move((-myrandmove*MICROSTEPS)+(64*MICROSTEPS));   
-          stepperAngle = 64*MICROSTEPS;
+          stepper.move((-myrandmove*MICROSTEPS)+(at_1*MICROSTEPS));   
+          stepperAngle = at_1*MICROSTEPS;
           Serial.println("aluminum silenced");
           delay(1000);
           linnear.rotate(whiskPos);
@@ -211,7 +228,14 @@ void loop() {
     
         if (ch == 'n' || digitalRead(NON) == HIGH)
         {
-          
+          switch (randopt) {
+          case 1:
+          no_1 = no_1;
+          break;
+          case 2:
+          no_1 = no_2;
+          break;
+          }
           linnear.enable();
           linnear.rotate(-whiskPos);
           stepper.move(-stepperAngle);
@@ -220,8 +244,8 @@ void loop() {
           delay(200);
           stepper.move(myrand2*MICROSTEPS);
           delay(200);
-          stepper.move((-myrandmove*MICROSTEPS)+(0*MICROSTEPS));   
-          stepperAngle = 0;
+          stepper.move((-myrandmove*MICROSTEPS)+(no_1*MICROSTEPS));   
+          stepperAngle = no_1;
           Serial.println("non");
           delay(1000);
           linnear.rotate(whiskPos);
