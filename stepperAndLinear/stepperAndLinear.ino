@@ -60,7 +60,9 @@ int no_2 = 4 * 32;
 
 
 void setup() {
-    
+    pinMode(5,INPUT);
+
+    //////////////////////
     linnear.begin(RPM_L, MICROSTEPS_L);
     linnear.setEnableActiveState(LOW);
     stepper.begin(RPM, MICROSTEPS);
@@ -101,6 +103,11 @@ void loop() {
   int rot;
  char ch;
   int bt;
+     if (digitalRead(5)==HIGH){
+       linnear.enable();
+       linnear.rotate(50);
+       linnear.disable();
+     }
      if (Serial.available())
       {   
         jj = Serial.peek();
@@ -151,7 +158,10 @@ void loop() {
       digitalWrite(ATT,LOW);
       digitalWrite(NON,LOW);
       digitalWrite(interruptPin,LOW);
-
+      digitalWrite(R_ALUM,LOW);
+      digitalWrite(R_MUT,LOW);
+      digitalWrite(R_NON,LOW);
+      digitalWrite(R_OBJ,LOW);
     
       
        
@@ -183,9 +193,9 @@ void loop() {
           linnear.rotate(whiskPos);
           linnear.disable();
           delay(500);
-          digitalWrite(3,HIGH);
+          digitalWrite(R_OBJ,HIGH);
           delay(100);
-          digitalWrite(3,LOW);
+          digitalWrite(R_ALUM,HIGH);
           digitalWrite(ALUM,LOW);
         }
     
@@ -216,13 +226,10 @@ void loop() {
           delay(1000);
           linnear.rotate(whiskPos);
           linnear.disable();
-          digitalWrite(3,HIGH);
+          delay(500);
+          digitalWrite(R_OBJ,HIGH);
           delay(100);
-          digitalWrite(3,LOW);
-          delay(100);
-          digitalWrite(3,HIGH);
-          delay(100);
-          digitalWrite(3,LOW);
+          digitalWrite(R_MUT,HIGH);
           digitalWrite(ATT,LOW);
          
           
@@ -255,17 +262,10 @@ void loop() {
           delay(1000);
           linnear.rotate(whiskPos);
           linnear.disable();
-          digitalWrite(3,HIGH);
+          delay(500);
+          digitalWrite(R_OBJ,HIGH);
           delay(100);
-          digitalWrite(3,LOW);
-          delay(100);
-          digitalWrite(3,HIGH);
-          delay(100);
-          digitalWrite(3,LOW);
-          delay(100);
-          digitalWrite(3,HIGH);
-          delay(100);
-          digitalWrite(3,LOW);
+          digitalWrite(R_NON,HIGH);
           digitalWrite(NON,LOW);
         
          
