@@ -22,10 +22,9 @@
 #define LFWD 17
 #define LBCK 22
 #define CATCH_FWD 18
-#define CATCH_BCK 16
+
 
 //Define the teensy pins to report back to Bonsai
-#define L_WH 11
 #define L_ST 10
 #define L_CATCH 5
 #define R_ALUM 8
@@ -161,8 +160,8 @@ void loop() {
       digitalWrite(R_MUT,LOW);
       digitalWrite(R_NON,LOW);
       digitalWrite(R_OBJ,LOW);
-	  digitalWrite(L_ST,LOW);
-	  digitalWrite(LFWD,LOW);
+	    digitalWrite(L_ST,LOW);
+	    digitalWrite(LFWD,LOW);
     
       
        
@@ -195,6 +194,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_ALUM,HIGH);
+          delay(200);
           digitalWrite(ALUM,LOW);
         }
     
@@ -224,6 +224,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_MUT,HIGH);
+          delay(200);
           digitalWrite(ATT,LOW);
          
           
@@ -256,6 +257,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_NON,HIGH);
+          delay(200);
           digitalWrite(NON,LOW);
         
          
@@ -269,7 +271,7 @@ void loop() {
 			whiskPos = -whiskPos;
 			linnear.disable();
 			digitalWrite(L_ST,HIGH);
-			delay(100);
+			delay(200);
 			
 		}
       

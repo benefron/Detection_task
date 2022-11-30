@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.6.3"
+<WorkflowBuilder Version="2.7.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:ard="clr-namespace:Bonsai.Arduino;assembly=Bonsai.Arduino"
-                 xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                 xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -33,16 +33,37 @@
         </PropertyMappings>
       </Expression>
       <Expression xsi:type="ExternalizedMapping">
-        <Property Name="Value" DisplayName="Pin" />
+        <Property Name="Value" DisplayName="Arduino pin" />
       </Expression>
-      <Expression xsi:type="PropertySource" TypeArguments="ard:DigitalOutput,sys:Int32">
-        <MemberName>Pin</MemberName>
-        <Value>4</Value>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>1</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Value" />
+        </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>1</Value>
+        </Combinator>
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>
           <Property Name="Pin" />
         </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Value" />
+        </PropertyMappings>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>1</Value>
+        </Combinator>
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>
@@ -52,7 +73,7 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="ard:DigitalOutput">
           <ard:PortName>COM9</ard:PortName>
-          <ard:Pin>4</ard:Pin>
+          <ard:Pin>1</ard:Pin>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -68,28 +89,32 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="ard:DigitalOutput">
           <ard:PortName>COM9</ard:PortName>
-          <ard:Pin>4</ard:Pin>
+          <ard:Pin>1</ard:Pin>
         </Combinator>
       </Expression>
       <Expression xsi:type="WorkflowOutput" />
     </Nodes>
     <Edges>
       <Edge From="0" To="1" Label="Source1" />
-      <Edge From="1" To="10" Label="Source1" />
+      <Edge From="1" To="14" Label="Source1" />
       <Edge From="2" To="3" Label="Source1" />
       <Edge From="3" To="4" Label="Source1" />
       <Edge From="3" To="5" Label="Source1" />
-      <Edge From="4" To="13" Label="Source2" />
-      <Edge From="5" To="10" Label="Source2" />
+      <Edge From="4" To="17" Label="Source2" />
+      <Edge From="5" To="14" Label="Source2" />
       <Edge From="6" To="7" Label="Source1" />
       <Edge From="7" To="8" Label="Source1" />
-      <Edge From="7" To="9" Label="Source1" />
-      <Edge From="8" To="13" Label="Source3" />
-      <Edge From="9" To="10" Label="Source3" />
-      <Edge From="10" To="11" Label="Source1" />
+      <Edge From="7" To="11" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="10" To="17" Label="Source3" />
       <Edge From="11" To="12" Label="Source1" />
       <Edge From="12" To="13" Label="Source1" />
-      <Edge From="13" To="14" Label="Source1" />
+      <Edge From="13" To="14" Label="Source3" />
+      <Edge From="14" To="15" Label="Source1" />
+      <Edge From="15" To="16" Label="Source1" />
+      <Edge From="16" To="17" Label="Source1" />
+      <Edge From="17" To="18" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
