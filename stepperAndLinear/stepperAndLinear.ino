@@ -56,7 +56,7 @@ int at_1 = 2 * 32;
 int at_2 = 5 * 32;  
 int no_1 = 0 * 32;
 int no_2 = 4 * 32;
-
+int num_cir = 65;
 
 
 void setup() {
@@ -89,6 +89,13 @@ void setup() {
 }
 
 void loop() {
+  while(digitalRead(5)==HIGH){
+    linnear.enable();
+    linnear.rotate(num_cir*180);
+    linnear.disable();
+    num_cir = -num_cir;
+  }
+ 
     // generate random numbers to rotate motor
  myrand1  = random(-250,250) ; 
  myrand2  = random(-250,250) ;
@@ -103,11 +110,8 @@ void loop() {
   int rot;
  char ch;
   int bt;
-     if (digitalRead(5)==HIGH){
-       linnear.enable();
-       linnear.rotate(50);
-       linnear.disable();
-     }
+     
+
      if (Serial.available())
       {   
         jj = Serial.peek();
