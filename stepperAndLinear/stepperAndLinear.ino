@@ -56,11 +56,11 @@ int at_1 = 2 * 32;
 int at_2 = 5 * 32;  
 int no_1 = 0 * 32;
 int no_2 = 4 * 32;
-int num_cir = 65;
+
 
 
 void setup() {
-    pinMode(5,INPUT);
+    
 
     //////////////////////
     linnear.begin(RPM_L, MICROSTEPS_L);
@@ -89,12 +89,7 @@ void setup() {
 }
 
 void loop() {
-  while(digitalRead(5)==HIGH){
-    linnear.enable();
-    linnear.rotate(num_cir*180);
-    linnear.disable();
-    num_cir = -num_cir;
-  }
+
  
     // generate random numbers to rotate motor
  myrand1  = random(-250,250) ; 
@@ -166,6 +161,8 @@ void loop() {
       digitalWrite(R_MUT,LOW);
       digitalWrite(R_NON,LOW);
       digitalWrite(R_OBJ,LOW);
+	  digitalWrite(L_ST,LOW);
+	  digitalWrite(LFWD,LOW);
     
       
        
@@ -182,8 +179,7 @@ void loop() {
           tempAngle = al_2;
           break;
           }
-          linnear.enable();
-          linnear.rotate(-whiskPos);
+
           stepper.move(-stepperAngle);
           delay(200);
           stepper.move(myrand1*MICROSTEPS);
@@ -194,8 +190,7 @@ void loop() {
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum");
           delay(1000);
-          linnear.rotate(whiskPos);
-          linnear.disable();
+
           delay(500);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
@@ -215,9 +210,6 @@ void loop() {
           tempAngle = at_2;
           break;
           }
-          linnear.enable();
-          linnear.rotate(-whiskPos);
-
           stepper.move(-stepperAngle);
           delay(200);
           stepper.move(myrand1*MICROSTEPS);
@@ -228,8 +220,6 @@ void loop() {
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum silenced");
           delay(1000);
-          linnear.rotate(whiskPos);
-          linnear.disable();
           delay(500);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
@@ -252,9 +242,7 @@ void loop() {
           tempAngle = no_2;
           break;
           }
-          linnear.enable();
-          linnear.rotate(-whiskPos);
-          stepper.move(-stepperAngle);
+         
           delay(200);
           stepper.move(myrand1*MICROSTEPS);
           delay(200);
@@ -264,8 +252,6 @@ void loop() {
           stepperAngle = tempAngle;
           Serial.println("non");
           delay(1000);
-          linnear.rotate(whiskPos);
-          linnear.disable();
           delay(500);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
@@ -276,6 +262,16 @@ void loop() {
           
           
         }
+        if (digitalRead(LFWD) == HIGH)
+		{
+			linnear.enable();
+			linnear.rotate(-whiskPos);
+			whiskPos = -whiskPos;
+			linnear.disable();
+			digitalWrite(L_ST,HIGH);
+			delay(100);
+			
+		}
       
 }
       
