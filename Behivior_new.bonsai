@@ -29,7 +29,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>0</Value>
+                <Value>2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -45,7 +45,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -184,7 +184,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>0</Value>
+                <Value>2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -192,7 +192,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -1246,7 +1246,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="Extensions\Output control.bonsai">
                           <PortName>COM9</PortName>
-                          <Arduino_x0020_pin>4</Arduino_x0020_pin>
+                          <Arduino_x0020_pin>14</Arduino_x0020_pin>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
                       </Nodes>
@@ -1408,7 +1408,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="Extensions\Output control with timing.bonsai">
                           <PortName>COM9</PortName>
-                          <DueTime>PT0.52S</DueTime>
+                          <DueTime>PT0.25S</DueTime>
                           <Value>13</Value>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -1809,6 +1809,122 @@ def process(value):
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
                     <io:IncludeHeader>false</io:IncludeHeader>
+                  </Expression>
+                  <Expression xsi:type="GroupWorkflow">
+                    <Name>Videos</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>path</Name>
+                        </Expression>
+                        <Expression xsi:type="GroupWorkflow">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Timestamp" />
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Day</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Month</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Year</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Add" />
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                              <Edge From="1" To="4" Label="Source1" />
+                              <Edge From="1" To="6" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source1" />
+                              <Edge From="3" To="10" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
+                              <Edge From="5" To="10" Label="Source3" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="10" Label="Source5" />
+                              <Edge From="8" To="10" Label="Source2" />
+                              <Edge From="9" To="10" Label="Source4" />
+                              <Edge From="10" To="11" Label="Source1" />
+                              <Edge From="11" To="12" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\Videos\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Animal</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>_.avi</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Zip" />
+                        </Expression>
+                        <Expression xsi:type="Add" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>videoPath</Name>
+                        </Expression>
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="6" Label="Source1" />
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="6" Label="Source3" />
+                        <Edge From="2" To="6" Label="Source2" />
+                        <Edge From="3" To="6" Label="Source5" />
+                        <Edge From="4" To="6" Label="Source4" />
+                        <Edge From="5" To="6" Label="Source6" />
+                        <Edge From="6" To="7" Label="Source1" />
+                        <Edge From="7" To="8" Label="Source1" />
+                      </Edges>
+                    </Workflow>
                   </Expression>
                 </Nodes>
                 <Edges>
@@ -3875,6 +3991,26 @@ def process(value):
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Value" DisplayName="position linear motor" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="wie:KeyDown">
+          <wie:Filter>F4</wie:Filter>
+          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="IntProperty">
+          <Value>10</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="io:SerialStringWrite">
+          <io:PortName>COM11</io:PortName>
+          <io:NewLine>\r\n</io:NewLine>
+        </Combinator>
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="0" To="1" Label="Source1" />
@@ -3882,6 +4018,9 @@ def process(value):
       <Edge From="5" To="6" Label="Source1" />
       <Edge From="8" To="9" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
+      <Edge From="15" To="17" Label="Source1" />
+      <Edge From="16" To="17" Label="Source2" />
+      <Edge From="17" To="18" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

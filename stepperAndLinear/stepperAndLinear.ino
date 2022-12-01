@@ -16,7 +16,7 @@
 #define STEP 1
 
 //Defining the teensy pins for control using Bonsai
-#define ALUM 21
+#define ALUM 11
 #define ATT 20
 #define NON 19
 #define LFWD 17
@@ -194,7 +194,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_ALUM,HIGH);
-          delay(200);
+          delay(40);
           digitalWrite(ALUM,LOW);
         }
     
@@ -224,7 +224,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_MUT,HIGH);
-          delay(200);
+          delay(50);
           digitalWrite(ATT,LOW);
          
           
@@ -257,7 +257,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_NON,HIGH);
-          delay(200);
+          delay(40);
           digitalWrite(NON,LOW);
         
          
@@ -271,7 +271,7 @@ void loop() {
 			whiskPos = -whiskPos;
 			linnear.disable();
 			digitalWrite(L_ST,HIGH);
-			delay(200);
+			delay(40);
 			
 		}
       
