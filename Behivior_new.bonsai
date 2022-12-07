@@ -33,7 +33,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>0</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -49,7 +49,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.5</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -86,7 +86,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>6</Value>
+                <Value>3</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -102,7 +102,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -289,7 +289,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>FVB101</Value>
+                <Value>FVB102</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -346,7 +346,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Dis</io:Path>
-                      <io:SearchPattern>FVB101</io:SearchPattern>
+                      <io:SearchPattern>FVB102</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -535,7 +535,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Dis\FVB101\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB102\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -1438,7 +1438,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="IntProperty">
-                                  <Value>6</Value>
+                                  <Value>5</Value>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="PropertyMapping">
@@ -1448,7 +1448,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="IntProperty">
-                                  <Value>6</Value>
+                                  <Value>5</Value>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="PropertyMapping">
@@ -1463,7 +1463,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="IntProperty">
-                                  <Value>6</Value>
+                                  <Value>5</Value>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="PropertyMapping">
@@ -1474,7 +1474,7 @@ def process(value):
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="ard:DigitalOutput">
                                   <ard:PortName>COM9</ard:PortName>
-                                  <ard:Pin>6</ard:Pin>
+                                  <ard:Pin>5</ard:Pin>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1490,7 +1490,7 @@ def process(value):
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="ard:DigitalOutput">
                                   <ard:PortName>COM9</ard:PortName>
-                                  <ard:Pin>6</ard:Pin>
+                                  <ard:Pin>5</ard:Pin>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="WorkflowOutput" />
@@ -2290,7 +2290,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Dis\FVB101\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB102\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2320,7 +2320,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Dis\FVB101\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Dis\FVB102\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2378,7 +2378,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Dis\FVB101\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB102\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2513,7 +2513,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="cv:VideoWriter">
-                            <cv:FileName>E:\Ben\Dis\FVB101\\Videos\1_12_2022\FVB101_.avi</cv:FileName>
+                            <cv:FileName>E:\Ben\Dis\FVB101\\Videos\7_12_2022\FVB101_.avi</cv:FileName>
                             <cv:Suffix>Timestamp</cv:Suffix>
                             <cv:Buffered>true</cv:Buffered>
                             <cv:Overwrite>false</cv:Overwrite>
@@ -2692,7 +2692,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="dsp:MatrixWriter">
-                            <dsp:Path>E:\Ben\Dis\FVB101\\Analogs\1_12_2022\Sound_FVB101.bin</dsp:Path>
+                            <dsp:Path>E:\Ben\Dis\FVB101\\Analogs\7_12_2022\Sound_FVB101.bin</dsp:Path>
                             <dsp:Suffix>Timestamp</dsp:Suffix>
                             <dsp:Overwrite>false</dsp:Overwrite>
                             <dsp:Layout>RowMajor</dsp:Layout>
@@ -2856,7 +2856,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="dsp:MatrixWriter">
-                            <dsp:Path>E:\Ben\Dis\FVB101\\Analogs\1_12_2022\EncoderFVB101.bin</dsp:Path>
+                            <dsp:Path>E:\Ben\Dis\FVB101\\Analogs\7_12_2022\EncoderFVB101.bin</dsp:Path>
                             <dsp:Suffix>Timestamp</dsp:Suffix>
                             <dsp:Overwrite>false</dsp:Overwrite>
                             <dsp:Layout>RowMajor</dsp:Layout>
@@ -4993,7 +4993,7 @@ def process(value):
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="IntProperty">
-          <Value>10</Value>
+          <Value>5</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">

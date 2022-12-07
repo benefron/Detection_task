@@ -8,7 +8,7 @@
 #define RPM_L 300
 #define SLEEP_L 15
 #define SLEEP 2
-#define MICROSTEPS_L 16
+#define MICROSTEPS_L 1
 #define MICROSTEPS 1
 #define DIR_L 13
 #define STEP_L 14
@@ -33,7 +33,7 @@
 #define R_OBJ 9
 
 // Create interrupt pin
-const byte interruptPin = 23;
+const byte interruptPin = 12;
 
 // intilaize motor objects
 BasicStepperDriver linnear(MOTOR_STEPS, DIR_L, STEP_L,SLEEP_L);
@@ -49,12 +49,12 @@ int myrandmove = myrand1+myrand2 ; // sum movement of myrand1+myrand2
 int randangle; // rand option between 2 stimulus.
 int randopt; // switch case for stimulus.
 // define the position of the objects on the wheel
-int al_1 = 1 * 32;
-int al_2 = 3 * 32;
-int at_1 = 2 * 32;
-int at_2 = 5 * 32;  
-int no_1 = 0 * 32;
-int no_2 = 4 * 32;
+int al_1 = 1 * 33;
+int al_2 = 3 * 33;
+int at_1 = 2 * 33;
+int at_2 = 5 * 33;  
+int no_1 = 0 * 33;
+int no_2 = 4 * 33;
 
 
 
@@ -75,7 +75,7 @@ void setup() {
     
     pinMode(3,OUTPUT);
     randomSeed(analogRead(0));
-    while (! Serial); // Wait until Serial is ready - Leonardo
+   // while (! Serial); // Wait until Serial is ready - Leonardo
    
    attachInterrupt(digitalPinToInterrupt(interruptPin), advancemotor, RISING);
    Serial.println("l - aluminum foil m - muted n - non");
@@ -115,7 +115,7 @@ void loop() {
           mm = Serial.parseInt();
           Serial.println(mm);
           
-          bt = mm * 180;
+          bt = mm * 360;
           linnear.rotate(bt);
           whiskPos += bt;
           Serial.println(whiskPos);
@@ -137,7 +137,7 @@ void loop() {
           catchD.remove(0,1); 
           Serial.print("catch distance");
           Serial.println(catchD);
-          catch_dis = catchD.toInt()*180;
+          catch_dis = catchD.toInt()*360;
         }
         else
         {
@@ -180,11 +180,11 @@ void loop() {
           }
 
           stepper.move(-stepperAngle);
-          delay(200);
+          delay(150);
           stepper.move(myrand1*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move(myrand2*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));       
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum");
@@ -211,11 +211,11 @@ void loop() {
           break;
           }
           stepper.move(-stepperAngle);
-          delay(200);
+          delay(150);
           stepper.move(myrand1*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move(myrand2*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum silenced");
@@ -244,11 +244,12 @@ void loop() {
           break;
           }
          
+          stepper.move(-stepperAngle);
           delay(200);
           stepper.move(myrand1*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move(myrand2*MICROSTEPS);
-          delay(200);
+          delay(150);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle;
           Serial.println("non");
