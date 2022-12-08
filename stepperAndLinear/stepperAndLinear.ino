@@ -272,7 +272,7 @@ void loop() {
 			whiskPos = -whiskPos;
 			linnear.disable();
 			digitalWrite(L_ST,HIGH);
-			delay(40);
+			delay(100);
 			
 		}
       
