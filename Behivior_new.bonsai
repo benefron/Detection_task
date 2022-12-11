@@ -86,7 +86,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>6</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -102,7 +102,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>3</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -188,7 +188,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>0</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -196,7 +196,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.5</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -346,7 +346,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Dis</io:Path>
-                      <io:SearchPattern>FVB102</io:SearchPattern>
+                      <io:SearchPattern>FVB103</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -535,7 +535,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Dis\FVB102\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB103\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2290,7 +2290,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Dis\FVB102\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB103\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2320,7 +2320,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Dis\FVB102\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Dis\FVB103\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2378,7 +2378,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Dis\FVB102\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Dis\FVB103\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2427,6 +2427,40 @@ def process(value):
   x = str(value)
   return x</ipy:Script>
                               </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.DateTime</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>TimeOfDay</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Hours</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Minutes</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="StringProperty">
                                   <Value>_</Value>
@@ -2448,16 +2482,26 @@ def process(value):
                               <Edge From="1" To="2" Label="Source1" />
                               <Edge From="1" To="4" Label="Source1" />
                               <Edge From="1" To="6" Label="Source1" />
+                              <Edge From="1" To="8" Label="Source1" />
                               <Edge From="2" To="3" Label="Source1" />
-                              <Edge From="3" To="10" Label="Source1" />
+                              <Edge From="3" To="18" Label="Source1" />
                               <Edge From="4" To="5" Label="Source1" />
-                              <Edge From="5" To="10" Label="Source3" />
+                              <Edge From="5" To="18" Label="Source3" />
                               <Edge From="6" To="7" Label="Source1" />
-                              <Edge From="7" To="10" Label="Source5" />
-                              <Edge From="8" To="10" Label="Source2" />
-                              <Edge From="9" To="10" Label="Source4" />
+                              <Edge From="7" To="18" Label="Source5" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                              <Edge From="9" To="12" Label="Source1" />
                               <Edge From="10" To="11" Label="Source1" />
-                              <Edge From="11" To="12" Label="Source1" />
+                              <Edge From="11" To="18" Label="Source7" />
+                              <Edge From="12" To="13" Label="Source1" />
+                              <Edge From="13" To="18" Label="Source9" />
+                              <Edge From="14" To="18" Label="Source2" />
+                              <Edge From="15" To="18" Label="Source4" />
+                              <Edge From="16" To="18" Label="Source6" />
+                              <Edge From="17" To="18" Label="Source8" />
+                              <Edge From="18" To="19" Label="Source1" />
+                              <Edge From="19" To="20" Label="Source1" />
                             </Edges>
                           </Workflow>
                         </Expression>
@@ -2474,60 +2518,36 @@ def process(value):
                             <Value>\</Value>
                           </Combinator>
                         </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Session number</Name>
+                        </Expression>
+                        <Expression xsi:type="ipy:PythonTransform">
+                          <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>session_</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\</Value>
+                          </Combinator>
+                        </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="StringProperty">
                             <Value>_.avi</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
+                          <Combinator xsi:type="rx:CombineLatest" />
                         </Expression>
                         <Expression xsi:type="Add" />
                         <Expression xsi:type="rx:BehaviorSubject">
                           <Name>videoPath</Name>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>videoPath</Name>
-                        </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="FileName" />
-                          </PropertyMappings>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Camera monitor</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="wie:KeyDown">
-                            <wie:Filter>F2</wie:Filter>
-                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>fps</Name>
-                        </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="FrameRate" />
-                          </PropertyMappings>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="cv:VideoWriter">
-                            <cv:FileName>E:\Ben\Dis\FVB102\\Videos\8_12_2022\FVB102_.avi</cv:FileName>
-                            <cv:Suffix>Timestamp</cv:Suffix>
-                            <cv:Buffered>true</cv:Buffered>
-                            <cv:Overwrite>false</cv:Overwrite>
-                            <cv:FourCC>mjpg</cv:FourCC>
-                            <cv:FrameRate>200</cv:FrameRate>
-                            <cv:FrameSize>
-                              <cv:Width>0</cv:Width>
-                              <cv:Height>0</cv:Height>
-                            </cv:FrameSize>
-                            <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:TakeUntil" />
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="wie:KeyDown">
@@ -2536,374 +2556,631 @@ def process(value):
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:SubscribeWhen" />
+                          <Combinator xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:Accumulate" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>Session number</Name>
+                        </Expression>
+                        <Expression xsi:type="rx:SelectMany">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>videoPath</Name>
+                              </Expression>
+                              <Expression xsi:type="PropertyMapping">
+                                <PropertyMappings>
+                                  <Property Name="FileName" />
+                                </PropertyMappings>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Camera monitor</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>fps</Name>
+                              </Expression>
+                              <Expression xsi:type="PropertyMapping">
+                                <PropertyMappings>
+                                  <Property Name="FrameRate" />
+                                </PropertyMappings>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="cv:VideoWriter">
+                                  <cv:FileName>E:\Ben\Dis\FVB103\\Videos\11_12_2022_16_24\session_3\FVB103_.avi</cv:FileName>
+                                  <cv:Suffix>Timestamp</cv:Suffix>
+                                  <cv:Buffered>true</cv:Buffered>
+                                  <cv:Overwrite>false</cv:Overwrite>
+                                  <cv:FourCC>mjpg</cv:FourCC>
+                                  <cv:FrameRate>200</cv:FrameRate>
+                                  <cv:FrameSize>
+                                    <cv:Width>0</cv:Width>
+                                    <cv:Height>0</cv:Height>
+                                  </cv:FrameSize>
+                                  <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Exp. type</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>End trail</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:TakeUntil" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:SubscribeWhen" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Repeat" />
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="5" Label="Source1" />
+                              <Edge From="2" To="5" Label="Source2" />
+                              <Edge From="3" To="4" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source3" />
+                              <Edge From="5" To="8" Label="Source1" />
+                              <Edge From="6" To="9" Label="Source2" />
+                              <Edge From="7" To="8" Label="Source2" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                              <Edge From="10" To="11" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>F2</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:TakeUntil" />
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Repeat" />
                         </Expression>
                       </Nodes>
                       <Edges>
-                        <Edge From="0" To="6" Label="Source1" />
+                        <Edge From="0" To="10" Label="Source1" />
                         <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="6" Label="Source3" />
-                        <Edge From="2" To="6" Label="Source2" />
-                        <Edge From="3" To="6" Label="Source5" />
-                        <Edge From="4" To="6" Label="Source4" />
-                        <Edge From="5" To="6" Label="Source6" />
-                        <Edge From="6" To="7" Label="Source1" />
-                        <Edge From="7" To="8" Label="Source1" />
-                        <Edge From="9" To="10" Label="Source1" />
-                        <Edge From="10" To="15" Label="Source1" />
-                        <Edge From="11" To="15" Label="Source2" />
-                        <Edge From="12" To="16" Label="Source2" />
+                        <Edge From="1" To="10" Label="Source3" />
+                        <Edge From="2" To="10" Label="Source2" />
+                        <Edge From="3" To="10" Label="Source8" />
+                        <Edge From="4" To="10" Label="Source4" />
+                        <Edge From="5" To="6" Label="Source1" />
+                        <Edge From="6" To="10" Label="Source6" />
+                        <Edge From="7" To="10" Label="Source5" />
+                        <Edge From="8" To="10" Label="Source7" />
+                        <Edge From="9" To="10" Label="Source10" />
+                        <Edge From="10" To="11" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source1" />
                         <Edge From="13" To="14" Label="Source1" />
-                        <Edge From="14" To="15" Label="Source3" />
-                        <Edge From="15" To="16" Label="Source1" />
-                        <Edge From="16" To="18" Label="Source1" />
-                        <Edge From="17" To="18" Label="Source2" />
-                        <Edge From="18" To="19" Label="Source1" />
-                      </Edges>
-                    </Workflow>
-                  </Expression>
-                  <Expression xsi:type="GroupWorkflow">
-                    <Name>Sound</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>path</Name>
-                        </Expression>
-                        <Expression xsi:type="GroupWorkflow">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Timestamp" />
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Day</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Month</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Year</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="StringProperty">
-                                  <Value>_</Value>
-                                </Combinator>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="StringProperty">
-                                  <Value>_</Value>
-                                </Combinator>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Zip" />
-                              </Expression>
-                              <Expression xsi:type="Add" />
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                              <Edge From="1" To="4" Label="Source1" />
-                              <Edge From="1" To="6" Label="Source1" />
-                              <Edge From="2" To="3" Label="Source1" />
-                              <Edge From="3" To="10" Label="Source1" />
-                              <Edge From="4" To="5" Label="Source1" />
-                              <Edge From="5" To="10" Label="Source3" />
-                              <Edge From="6" To="7" Label="Source1" />
-                              <Edge From="7" To="10" Label="Source5" />
-                              <Edge From="8" To="10" Label="Source2" />
-                              <Edge From="9" To="10" Label="Source4" />
-                              <Edge From="10" To="11" Label="Source1" />
-                              <Edge From="11" To="12" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>\Analogs\</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Animal</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>\Sound_</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>.bin</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
-                        </Expression>
-                        <Expression xsi:type="Add" />
-                        <Expression xsi:type="rx:BehaviorSubject">
-                          <Name>audPath</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="wie:KeyDown">
-                            <wie:Filter>F2</wie:Filter>
-                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="wie:KeyDown">
-                            <wie:Filter>F12</wie:Filter>
-                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>audPath</Name>
-                        </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="Path" />
-                          </PropertyMappings>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Sound monitor</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="dsp:MatrixWriter">
-                            <dsp:Path>E:\Ben\Dis\FVB102\\Analogs\8_12_2022\Sound_FVB102.bin</dsp:Path>
-                            <dsp:Suffix>Timestamp</dsp:Suffix>
-                            <dsp:Overwrite>false</dsp:Overwrite>
-                            <dsp:Layout>RowMajor</dsp:Layout>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:TakeUntil" />
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:SubscribeWhen" />
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Repeat" />
-                        </Expression>
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="6" Label="Source1" />
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="6" Label="Source3" />
-                        <Edge From="2" To="6" Label="Source2" />
-                        <Edge From="3" To="6" Label="Source5" />
-                        <Edge From="4" To="6" Label="Source4" />
-                        <Edge From="5" To="6" Label="Source6" />
-                        <Edge From="6" To="7" Label="Source1" />
-                        <Edge From="7" To="8" Label="Source1" />
-                        <Edge From="9" To="15" Label="Source2" />
-                        <Edge From="10" To="16" Label="Source2" />
-                        <Edge From="11" To="12" Label="Source1" />
-                        <Edge From="12" To="14" Label="Source1" />
-                        <Edge From="13" To="14" Label="Source2" />
+                        <Edge From="13" To="17" Label="Source1" />
                         <Edge From="14" To="15" Label="Source1" />
                         <Edge From="15" To="16" Label="Source1" />
-                        <Edge From="16" To="17" Label="Source1" />
-                      </Edges>
-                    </Workflow>
-                  </Expression>
-                  <Expression xsi:type="GroupWorkflow">
-                    <Name>Runing</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>path</Name>
-                        </Expression>
-                        <Expression xsi:type="GroupWorkflow">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Timestamp" />
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Day</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Month</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Timestamp.Year</Selector>
-                              </Expression>
-                              <Expression xsi:type="ipy:PythonTransform">
-                                <ipy:Script>@returns(str)
-def process(value):
-  x = str(value)
-  return x</ipy:Script>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="StringProperty">
-                                  <Value>_</Value>
-                                </Combinator>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="StringProperty">
-                                  <Value>_</Value>
-                                </Combinator>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Zip" />
-                              </Expression>
-                              <Expression xsi:type="Add" />
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                              <Edge From="1" To="4" Label="Source1" />
-                              <Edge From="1" To="6" Label="Source1" />
-                              <Edge From="2" To="3" Label="Source1" />
-                              <Edge From="3" To="10" Label="Source1" />
-                              <Edge From="4" To="5" Label="Source1" />
-                              <Edge From="5" To="10" Label="Source3" />
-                              <Edge From="6" To="7" Label="Source1" />
-                              <Edge From="7" To="10" Label="Source5" />
-                              <Edge From="8" To="10" Label="Source2" />
-                              <Edge From="9" To="10" Label="Source4" />
-                              <Edge From="10" To="11" Label="Source1" />
-                              <Edge From="11" To="12" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>\Analogs\</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Animal</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>\Encoder</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="StringProperty">
-                            <Value>.bin</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
-                        </Expression>
-                        <Expression xsi:type="Add" />
-                        <Expression xsi:type="rx:BehaviorSubject">
-                          <Name>RunningPath</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="wie:KeyDown">
-                            <wie:Filter>F2</wie:Filter>
-                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="wie:KeyDown">
-                            <wie:Filter>F12</wie:Filter>
-                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>RunningPath</Name>
-                        </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="Path" />
-                          </PropertyMappings>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Running monitor</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="dsp:MatrixWriter">
-                            <dsp:Path>E:\Ben\Dis\FVB102\\Analogs\8_12_2022\EncoderFVB102.bin</dsp:Path>
-                            <dsp:Suffix>Timestamp</dsp:Suffix>
-                            <dsp:Overwrite>false</dsp:Overwrite>
-                            <dsp:Layout>RowMajor</dsp:Layout>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:TakeUntil" />
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:SubscribeWhen" />
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Repeat" />
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>Running monitor</Name>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="dsp:Concat">
-                            <dsp:Axis>0</dsp:Axis>
-                          </Combinator>
-                        </Expression>
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="6" Label="Source1" />
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="6" Label="Source3" />
-                        <Edge From="2" To="6" Label="Source2" />
-                        <Edge From="3" To="6" Label="Source5" />
-                        <Edge From="4" To="6" Label="Source4" />
-                        <Edge From="5" To="6" Label="Source6" />
-                        <Edge From="6" To="7" Label="Source1" />
-                        <Edge From="7" To="8" Label="Source1" />
-                        <Edge From="9" To="15" Label="Source2" />
-                        <Edge From="10" To="16" Label="Source2" />
-                        <Edge From="11" To="12" Label="Source1" />
-                        <Edge From="12" To="14" Label="Source1" />
-                        <Edge From="13" To="14" Label="Source2" />
-                        <Edge From="13" To="19" Label="Source2" />
-                        <Edge From="14" To="15" Label="Source1" />
-                        <Edge From="15" To="16" Label="Source1" />
-                        <Edge From="16" To="17" Label="Source1" />
-                        <Edge From="18" To="19" Label="Source1" />
+                        <Edge From="17" To="19" Label="Source1" />
+                        <Edge From="18" To="19" Label="Source2" />
                         <Edge From="19" To="20" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="GroupWorkflow">
+                    <Name>Sound_files</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>path</Name>
+                        </Expression>
+                        <Expression xsi:type="GroupWorkflow">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Timestamp" />
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Day</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Month</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Year</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.DateTime</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>TimeOfDay</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Hours</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Minutes</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Add" />
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                              <Edge From="1" To="4" Label="Source1" />
+                              <Edge From="1" To="6" Label="Source1" />
+                              <Edge From="1" To="8" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source1" />
+                              <Edge From="3" To="18" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
+                              <Edge From="5" To="18" Label="Source3" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="18" Label="Source5" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                              <Edge From="9" To="12" Label="Source1" />
+                              <Edge From="10" To="11" Label="Source1" />
+                              <Edge From="11" To="18" Label="Source7" />
+                              <Edge From="12" To="13" Label="Source1" />
+                              <Edge From="13" To="18" Label="Source9" />
+                              <Edge From="14" To="18" Label="Source2" />
+                              <Edge From="15" To="18" Label="Source4" />
+                              <Edge From="16" To="18" Label="Source6" />
+                              <Edge From="17" To="18" Label="Source8" />
+                              <Edge From="18" To="19" Label="Source1" />
+                              <Edge From="19" To="20" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\Analogs\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Animal</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\Sound\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Session number</Name>
+                        </Expression>
+                        <Expression xsi:type="ipy:PythonTransform">
+                          <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>session_</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>_.bin</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:CombineLatest" />
+                        </Expression>
+                        <Expression xsi:type="Add" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>audPath</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>F12</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:SelectMany">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>audPath</Name>
+                              </Expression>
+                              <Expression xsi:type="PropertyMapping">
+                                <PropertyMappings>
+                                  <Property Name="Path" />
+                                </PropertyMappings>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Exp. type</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>End trail</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Sound monitor</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="dsp:MatrixWriter">
+                                  <dsp:Path>E:\Ben\Dis\FVB103\\Analogs\11_12_2022_16_24\Sound\session_3\FVB103_.bin</dsp:Path>
+                                  <dsp:Suffix>Timestamp</dsp:Suffix>
+                                  <dsp:Overwrite>false</dsp:Overwrite>
+                                  <dsp:Layout>ColumnMajor</dsp:Layout>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:TakeUntil" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:SubscribeWhen" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Repeat" />
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="5" Label="Source1" />
+                              <Edge From="2" To="7" Label="Source2" />
+                              <Edge From="3" To="6" Label="Source2" />
+                              <Edge From="4" To="5" Label="Source2" />
+                              <Edge From="5" To="6" Label="Source1" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="8" Label="Source1" />
+                              <Edge From="8" To="9" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>F2</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:TakeUntil" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Repeat" />
+                        </Expression>
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="10" Label="Source1" />
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="10" Label="Source3" />
+                        <Edge From="2" To="10" Label="Source2" />
+                        <Edge From="3" To="10" Label="Source8" />
+                        <Edge From="4" To="10" Label="Source4" />
+                        <Edge From="5" To="6" Label="Source1" />
+                        <Edge From="6" To="10" Label="Source6" />
+                        <Edge From="7" To="10" Label="Source5" />
+                        <Edge From="8" To="10" Label="Source7" />
+                        <Edge From="9" To="10" Label="Source10" />
+                        <Edge From="10" To="11" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source1" />
+                        <Edge From="13" To="14" Label="Source1" />
+                        <Edge From="14" To="16" Label="Source1" />
+                        <Edge From="15" To="16" Label="Source2" />
+                        <Edge From="16" To="17" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="GroupWorkflow">
+                    <Name>Running Files</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>path</Name>
+                        </Expression>
+                        <Expression xsi:type="GroupWorkflow">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Timestamp" />
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Day</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Month</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.Year</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Timestamp.DateTime</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>TimeOfDay</Selector>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Hours</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="MemberSelector">
+                                <Selector>Minutes</Selector>
+                              </Expression>
+                              <Expression xsi:type="ipy:PythonTransform">
+                                <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="StringProperty">
+                                  <Value>_</Value>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Zip" />
+                              </Expression>
+                              <Expression xsi:type="Add" />
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                              <Edge From="1" To="4" Label="Source1" />
+                              <Edge From="1" To="6" Label="Source1" />
+                              <Edge From="1" To="8" Label="Source1" />
+                              <Edge From="2" To="3" Label="Source1" />
+                              <Edge From="3" To="18" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
+                              <Edge From="5" To="18" Label="Source3" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="18" Label="Source5" />
+                              <Edge From="8" To="9" Label="Source1" />
+                              <Edge From="9" To="10" Label="Source1" />
+                              <Edge From="9" To="12" Label="Source1" />
+                              <Edge From="10" To="11" Label="Source1" />
+                              <Edge From="11" To="18" Label="Source7" />
+                              <Edge From="12" To="13" Label="Source1" />
+                              <Edge From="13" To="18" Label="Source9" />
+                              <Edge From="14" To="18" Label="Source2" />
+                              <Edge From="15" To="18" Label="Source4" />
+                              <Edge From="16" To="18" Label="Source6" />
+                              <Edge From="17" To="18" Label="Source8" />
+                              <Edge From="18" To="19" Label="Source1" />
+                              <Edge From="19" To="20" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\Analogs\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Animal</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\Encoder\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Session number</Name>
+                        </Expression>
+                        <Expression xsi:type="ipy:PythonTransform">
+                          <ipy:Script>@returns(str)
+def process(value):
+  x = str(value)
+  return x</ipy:Script>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>session_</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>\</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>_.bin</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:CombineLatest" />
+                        </Expression>
+                        <Expression xsi:type="Add" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>RunningPath</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>F12</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:SelectMany">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Exp. type</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>End trail</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>Running monitor</Name>
+                              </Expression>
+                              <Expression xsi:type="SubscribeSubject">
+                                <Name>RunningPath</Name>
+                              </Expression>
+                              <Expression xsi:type="PropertyMapping">
+                                <PropertyMappings>
+                                  <Property Name="Path" />
+                                </PropertyMappings>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="dsp:MatrixWriter">
+                                  <dsp:Path>E:\Ben\Dis\FVB103\\Videos\11_12_2022_16_24\Encoder\session_3\FVB103_.bin</dsp:Path>
+                                  <dsp:Suffix>Timestamp</dsp:Suffix>
+                                  <dsp:Overwrite>false</dsp:Overwrite>
+                                  <dsp:Layout>RowMajor</dsp:Layout>
+                                </Combinator>
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:TakeUntil" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:SubscribeWhen" />
+                              </Expression>
+                              <Expression xsi:type="Combinator">
+                                <Combinator xsi:type="rx:Repeat" />
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="7" Label="Source2" />
+                              <Edge From="1" To="6" Label="Source2" />
+                              <Edge From="2" To="5" Label="Source2" />
+                              <Edge From="3" To="4" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
+                              <Edge From="5" To="6" Label="Source1" />
+                              <Edge From="6" To="7" Label="Source1" />
+                              <Edge From="7" To="8" Label="Source1" />
+                              <Edge From="8" To="9" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>F2</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:TakeUntil" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Repeat" />
+                        </Expression>
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="10" Label="Source1" />
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="10" Label="Source3" />
+                        <Edge From="2" To="10" Label="Source2" />
+                        <Edge From="3" To="10" Label="Source8" />
+                        <Edge From="4" To="10" Label="Source4" />
+                        <Edge From="5" To="6" Label="Source1" />
+                        <Edge From="6" To="10" Label="Source6" />
+                        <Edge From="7" To="10" Label="Source5" />
+                        <Edge From="8" To="10" Label="Source7" />
+                        <Edge From="9" To="10" Label="Source10" />
+                        <Edge From="10" To="11" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source1" />
+                        <Edge From="13" To="14" Label="Source1" />
+                        <Edge From="14" To="16" Label="Source1" />
+                        <Edge From="15" To="16" Label="Source2" />
+                        <Edge From="16" To="17" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -3092,7 +3369,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p1:CreateBinomial">
-                            <p1:P>0</p1:P>
+                            <p1:P>1</p1:P>
                             <p1:N>1</p1:N>
                           </Combinator>
                         </Expression>
@@ -3303,6 +3580,9 @@ def process(value):
                           <Combinator xsi:type="rx:Repeat" />
                         </Expression>
                         <Expression xsi:type="MulticastSubject">
+                          <Name>End trail</Name>
+                        </Expression>
+                        <Expression xsi:type="MulticastSubject">
                           <Name>TotalHit</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -3344,8 +3624,9 @@ def process(value):
                         <Edge From="23" To="24" Label="Source2" />
                         <Edge From="24" To="25" Label="Source1" />
                         <Edge From="25" To="26" Label="Source1" />
-                        <Edge From="26" To="28" Label="Source1" />
-                        <Edge From="27" To="28" Label="Source2" />
+                        <Edge From="26" To="27" Label="Source1" />
+                        <Edge From="27" To="29" Label="Source1" />
+                        <Edge From="28" To="29" Label="Source2" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -4851,6 +5132,12 @@ def process(value):
             <Expression xsi:type="MulticastSubject">
               <Name>Events</Name>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty" />
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>End trail</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="4" Label="Source1" />
@@ -4866,6 +5153,7 @@ def process(value):
             <Edge From="7" To="8" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -5114,7 +5402,7 @@ def process(value):
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="mx:AnalogInput">
           <mx:SignalSource />
-          <mx:SampleRate>250000</mx:SampleRate>
+          <mx:SampleRate>100000</mx:SampleRate>
           <mx:ActiveEdge>Rising</mx:ActiveEdge>
           <mx:SampleMode>ContinuousSamples</mx:SampleMode>
           <mx:BufferSize>1000</mx:BufferSize>
