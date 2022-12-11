@@ -194,7 +194,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_ALUM,HIGH);
-          delay(40);
+          delay(100);
           digitalWrite(ALUM,LOW);
         }
     
@@ -224,7 +224,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_MUT,HIGH);
-          delay(50);
+          delay(100);
           digitalWrite(ATT,LOW);
          
           
@@ -258,7 +258,7 @@ void loop() {
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_NON,HIGH);
-          delay(40);
+          delay(100);
           digitalWrite(NON,LOW);
         
          
