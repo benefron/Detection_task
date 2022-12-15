@@ -1708,7 +1708,7 @@
       </Location>
       <Size>
         <Width>1506</Width>
-        <Height>903</Height>
+        <Height>890</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -2157,8 +2157,8 @@
           <VisualizerSettings>
             <TimeSeriesVisualizer>
               <Capacity>640</Capacity>
-              <Min>-1</Min>
-              <Max>1</Max>
+              <Min>0</Min>
+              <Max>1.1</Max>
               <AutoScale>true</AutoScale>
             </TimeSeriesVisualizer>
           </VisualizerSettings>
@@ -2181,8 +2181,8 @@
           <VisualizerSettings>
             <ScalarVisualizer>
               <Capacity>640</Capacity>
-              <Min>-1</Min>
-              <Max>1</Max>
+              <Min>0</Min>
+              <Max>1.1</Max>
               <AutoScale>true</AutoScale>
             </ScalarVisualizer>
           </VisualizerSettings>
@@ -2317,6 +2317,22 @@
           </VisualizerSettings>
         </MashupSettings>
       </TableLayoutPanelVisualizer>
+    </VisualizerSettings>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>true</Visible>
+    <Location>
+      <X>436</X>
+      <Y>273</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>314</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
     </VisualizerSettings>
   </DialogSettings>
 </VisualizerLayout>

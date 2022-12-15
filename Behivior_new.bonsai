@@ -2791,7 +2791,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>D:\Ben\Behavior\Omer_2\\Videos\15_12_2022_15_21\session_1\Omer_2_.avi</cv:FileName>
+                                  <cv:FileName>D:\Ben\Behavior\Omer_2\\Videos\15_12_2022_16_39\session_2\Omer_2_.avi</cv:FileName>
                                   <cv:Suffix>Timestamp</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3066,7 +3066,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>D:\Ben\Behavior\Omer_2\\Analogs\15_12_2022_15_21\Sound\session_1\Omer_2_.bin</dsp:Path>
+                                  <dsp:Path>D:\Ben\Behavior\Omer_2\\Analogs\15_12_2022_16_39\Sound\session_2\Omer_2_.bin</dsp:Path>
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3323,7 +3323,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>D:\Ben\Behavior\Omer_2\\Analogs\15_12_2022_15_21\Encoder\session_1\Omer_2_.bin</dsp:Path>
+                                  <dsp:Path>D:\Ben\Behavior\Omer_2\\Analogs\15_12_2022_16_39\Encoder\session_2\Omer_2_.bin</dsp:Path>
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -6983,7 +6983,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>Hit</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>Hit</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -6991,7 +6991,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>miss</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>Miss</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -6999,7 +6999,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>FA</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>FA</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -7007,7 +7007,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>CR</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>CR</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -7015,7 +7015,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>totalHit</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>TotalHit</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -7023,7 +7023,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>totalFA</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>TotalFA</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -7031,7 +7031,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>0</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>Hit Rate</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -7039,7 +7039,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                       <Value>0</Value>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
+                  <Expression xsi:type="rx:BehaviorSubject">
                     <Name>CR Rate</Name>
                   </Expression>
                 </Nodes>
@@ -7197,6 +7197,9 @@ def process(value):
           <viz:CellSpan ColumnSpan="1" RowSpan="1" />
           <viz:CellSpan ColumnSpan="1" RowSpan="5" />
         </viz:CellSpans>
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>Hit</Name>
       </Expression>
     </Nodes>
     <Edges>
