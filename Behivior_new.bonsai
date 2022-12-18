@@ -2455,25 +2455,6 @@ def process(value):
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>initilaize new exp</Name>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="IntProperty">
-                      <Value>999</Value>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="Disable">
-                    <Builder xsi:type="Combinator">
-                      <Combinator xsi:type="rx:Merge" />
-                    </Builder>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:WithLatestFrom" />
-                  </Expression>
-                  <Expression xsi:type="rx:BehaviorSubject">
-                    <Name>lastSettings</Name>
-                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
                       <Value>events.csv</Value>
@@ -2487,6 +2468,23 @@ def process(value):
                     <PropertyMappings>
                       <Property Name="FileName" />
                     </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>water amount</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Merge" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
                     <io:FileName>E:\Ben\Omer training\F109\events.csv</io:FileName>
@@ -2787,7 +2785,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\F109\\Videos\18_12_2022_10_29\session_1\F109_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\F109\\Videos\18_12_2022_12_43\session_1\F109_.avi</cv:FileName>
                                   <cv:Suffix>Timestamp</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3062,7 +3060,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F109\\Analogs\18_12_2022_10_29\Sound\session_1\F109_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F109\\Analogs\18_12_2022_12_43\Sound\session_1\F109_.bin</dsp:Path>
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3319,7 +3317,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F109\\Analogs\18_12_2022_10_29\Encoder\session_1\F109_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F109\\Analogs\18_12_2022_12_43\Encoder\session_1\F109_.bin</dsp:Path>
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -3385,7 +3383,7 @@ def process(value):
                   </Expression>
                 </Nodes>
                 <Edges>
-                  <Edge From="0" To="18" Label="Source1" />
+                  <Edge From="0" To="13" Label="Source1" />
                   <Edge From="1" To="2" Label="Source1" />
                   <Edge From="2" To="11" Label="Source1" />
                   <Edge From="3" To="9" Label="Source5" />
@@ -3396,16 +3394,16 @@ def process(value):
                   <Edge From="8" To="9" Label="Source1" />
                   <Edge From="9" To="10" Label="Source1" />
                   <Edge From="10" To="11" Label="Source2" />
-                  <Edge From="11" To="15" Label="Source1" />
-                  <Edge From="12" To="13" Label="Source1" />
+                  <Edge From="11" To="19" Label="Source1" />
+                  <Edge From="12" To="13" Label="Source2" />
                   <Edge From="13" To="14" Label="Source1" />
-                  <Edge From="14" To="15" Label="Source2" />
-                  <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="16" To="21" Label="Source2" />
+                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="15" To="21" Label="Source1" />
+                  <Edge From="16" To="18" Label="Source1" />
                   <Edge From="17" To="18" Label="Source2" />
-                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source2" />
                   <Edge From="19" To="20" Label="Source1" />
-                  <Edge From="20" To="21" Label="Source1" />
+                  <Edge From="20" To="21" Label="Source2" />
                   <Edge From="21" To="22" Label="Source1" />
                   <Edge From="23" To="24" Label="Source1" />
                   <Edge From="24" To="25" Label="Source1" />
@@ -3779,7 +3777,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT12S</rx:DueTime>
+                            <rx:DueTime>PT15S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -6580,6 +6578,14 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>give water</Name>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>090 - water</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Events</Name>
+            </Expression>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="Filter" DisplayName="Go to Alum" />
             </Expression>
@@ -6670,21 +6676,23 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="6" Label="Source1" />
             <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
             <Edge From="8" To="9" Label="Source1" />
-            <Edge From="9" To="10" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
             <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
             <Edge From="18" To="19" Label="Source1" />
+            <Edge From="19" To="20" Label="Source1" />
             <Edge From="20" To="21" Label="Source1" />
-            <Edge From="21" To="22" Label="Source1" />
             <Edge From="22" To="23" Label="Source1" />
+            <Edge From="23" To="24" Label="Source1" />
+            <Edge From="24" To="25" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -6777,6 +6785,9 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           </mx:Channels>
         </Combinator>
       </Expression>
+      <Expression xsi:type="rx:BehaviorSubject">
+        <Name>Sound monitor</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="dsp:Butterworth">
           <dsp:SampleRate>100000</dsp:SampleRate>
@@ -6785,9 +6796,6 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           <dsp:FilterOrder>3</dsp:FilterOrder>
           <dsp:FilterType>HighPass</dsp:FilterType>
         </Combinator>
-      </Expression>
-      <Expression xsi:type="rx:BehaviorSubject">
-        <Name>Sound monitor</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="mx:AnalogInput">
@@ -6809,6 +6817,9 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           </mx:Channels>
         </Combinator>
       </Expression>
+      <Expression xsi:type="rx:BehaviorSubject">
+        <Name>Running monitor</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="dsp:Butterworth">
           <dsp:SampleRate>10000</dsp:SampleRate>
@@ -6817,9 +6828,6 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           <dsp:FilterOrder>3</dsp:FilterOrder>
           <dsp:FilterType>HighPass</dsp:FilterType>
         </Combinator>
-      </Expression>
-      <Expression xsi:type="rx:BehaviorSubject">
-        <Name>Running monitor</Name>
       </Expression>
       <Expression xsi:type="ExternalizedMapping">
         <Property Name="Value" DisplayName="Water per drop" />
