@@ -1618,12 +1618,12 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>130</X>
+      <Y>130</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>336</Width>
+      <Height>191</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
@@ -1971,12 +1971,12 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>629</X>
+      <Y>118</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>979</Width>
+      <Height>858</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
@@ -2028,26 +2028,26 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>1991</X>
-      <Y>955</Y>
+      <X>1941</X>
+      <Y>947</Y>
     </Location>
     <Size>
-      <Width>964</Width>
-      <Height>346</Height>
+      <Width>1047</Width>
+      <Height>453</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <TableLayoutPanelVisualizer>
         <MashupSettings>
-          <Source>21</Source>
+          <Source>22</Source>
           <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
           <VisualizerSettings>
             <MatVisualizer>
               <XMin>0</XMin>
               <XMax>500000</XMax>
-              <YMin>-1.46</YMin>
-              <YMax>-1.3699999999999999</YMax>
+              <YMin>-0.04</YMin>
+              <YMax>0.040000000000000008</YMax>
               <AutoScaleX>true</AutoScaleX>
               <AutoScaleY>true</AutoScaleY>
               <SelectedPage>0</SelectedPage>
@@ -2066,8 +2066,8 @@
             <MatVisualizer>
               <XMin>0</XMin>
               <XMax>50000</XMax>
-              <YMin>5.5</YMin>
-              <YMax>5.5139999999999993</YMax>
+              <YMin>-0.0015</YMin>
+              <YMax>0.0015</YMax>
               <AutoScaleX>true</AutoScaleX>
               <AutoScaleY>true</AutoScaleY>
               <SelectedPage>0</SelectedPage>

@@ -6778,11 +6778,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:FrequencyFilter">
+        <Combinator xsi:type="dsp:Butterworth">
           <dsp:SampleRate>100000</dsp:SampleRate>
-          <dsp:Cutoff1>1000</dsp:Cutoff1>
+          <dsp:Cutoff1>2000</dsp:Cutoff1>
           <dsp:Cutoff2>0</dsp:Cutoff2>
-          <dsp:KernelLength>60</dsp:KernelLength>
+          <dsp:FilterOrder>3</dsp:FilterOrder>
           <dsp:FilterType>HighPass</dsp:FilterType>
         </Combinator>
       </Expression>
@@ -6810,12 +6810,12 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:FrequencyFilter">
+        <Combinator xsi:type="dsp:Butterworth">
           <dsp:SampleRate>10000</dsp:SampleRate>
-          <dsp:Cutoff1>0.005</dsp:Cutoff1>
+          <dsp:Cutoff1>1</dsp:Cutoff1>
           <dsp:Cutoff2>0</dsp:Cutoff2>
-          <dsp:KernelLength>60</dsp:KernelLength>
-          <dsp:FilterType>LowPass</dsp:FilterType>
+          <dsp:FilterOrder>3</dsp:FilterOrder>
+          <dsp:FilterType>HighPass</dsp:FilterType>
         </Combinator>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
