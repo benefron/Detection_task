@@ -84,6 +84,7 @@ void setup() {
    linnear.rotate(-36000);
    
    linnear.disable();
+   catch_dis = 10 * 360;   
 
 }
 
@@ -104,7 +105,8 @@ void loop() {
   int rot;
  char ch;
   int bt;
-     
+  int temp_catch;
+  
 
      if (Serial.available())
       {   
@@ -162,6 +164,7 @@ void loop() {
       digitalWrite(R_OBJ,LOW);
 	    digitalWrite(L_ST,LOW);
 	    digitalWrite(LFWD,LOW);
+      digitalWrite(L_CATCH,LOW);
     
       
        
@@ -265,13 +268,27 @@ void loop() {
           
           
         }
-        if (digitalRead(LFWD) == HIGH)
+        if (digitalRead(LFWD) == HIGH || ch == 'f')
 		{
 			linnear.enable();
 			linnear.rotate(-whiskPos);
 			whiskPos = -whiskPos;
 			linnear.disable();
+      delay(100);
 			digitalWrite(L_ST,HIGH);
+			delay(100);
+			
+		}
+     if (digitalRead(CATCH_FWD) == HIGH || ch == '.')
+		{
+			linnear.enable();
+      temp_catch = whiskPos + catch_dis;
+			linnear.rotate(-temp_catch);
+      catch_dis = - catch_dis;
+			whiskPos = -whiskPos;
+			linnear.disable();
+      delay(100);
+			digitalWrite(L_CATCH,HIGH);
 			delay(100);
 			
 		}
