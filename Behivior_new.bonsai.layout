@@ -5,8 +5,13 @@
   <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
+<<<<<<< HEAD
       <X>284</X>
       <Y>574</Y>
+=======
+      <X>272</X>
+      <Y>540</Y>
+>>>>>>> testing_step
     </Location>
     <Size>
       <Width>336</Width>
@@ -194,6 +199,165 @@
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
     <EditorVisualizerLayout>
+<<<<<<< HEAD
+=======
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>856</X>
+          <Y>561</Y>
+        </Location>
+        <Size>
+          <Width>336</Width>
+          <Height>247</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+>>>>>>> testing_step
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
+      <DialogSettings>
+        <Visible>false</Visible>
+        <Location>
+          <X>0</X>
+          <Y>0</Y>
+        </Location>
+        <Size>
+          <Width>0</Width>
+          <Height>0</Height>
+        </Size>
+        <WindowState>Normal</WindowState>
+      </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
         <Location>
@@ -293,12 +457,12 @@
       <DialogSettings>
         <Visible>false</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>230</X>
+          <Y>477</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>189</Height>
         </Size>
         <WindowState>Normal</WindowState>
       </DialogSettings>
@@ -421,30 +585,7 @@
           <Height>0</Height>
         </Size>
         <WindowState>Normal</WindowState>
-      </DialogSettings>
-      <DialogSettings>
-        <Visible>false</Visible>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-        <Size>
-          <Width>0</Width>
-          <Height>0</Height>
-        </Size>
-        <WindowState>Normal</WindowState>
-      </DialogSettings>
-      <DialogSettings xsi:type="WorkflowEditorSettings">
-        <Visible>false</Visible>
-        <Location>
-          <X>0</X>
-          <Y>0</Y>
-        </Location>
-        <Size>
-          <Width>0</Width>
-          <Height>0</Height>
-        </Size>
-        <WindowState>Normal</WindowState>
+<<<<<<< HEAD
         <EditorDialogSettings>
           <Visible>true</Visible>
           <Location>
@@ -1384,6 +1525,8 @@
             </VisualizerSettings>
           </DialogSettings>
         </EditorVisualizerLayout>
+=======
+>>>>>>> testing_step
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -1452,19 +1595,23 @@
     </EditorDialogSettings>
   </DialogSettings>
   <DialogSettings>
-    <Visible>false</Visible>
+    <Visible>true</Visible>
     <Location>
-      <X>646</X>
-      <Y>335</Y>
+      <X>1267</X>
+      <Y>121</Y>
     </Location>
     <Size>
       <Width>336</Width>
       <Height>418</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
-    <Visible>false</Visible>
+    <Visible>true</Visible>
     <Location>
       <X>648</X>
       <Y>749</Y>
@@ -1474,6 +1621,10 @@
       <Height>241</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
@@ -1612,7 +1763,7 @@
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
-    <Visible>false</Visible>
+    <Visible>true</Visible>
     <Location>
       <X>182</X>
       <Y>182</Y>
@@ -1622,6 +1773,23 @@
       <Height>279</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <MatVisualizer>
+        <XMin>0</XMin>
+        <XMax>50000</XMax>
+        <YMin>5.3850000000000007</YMin>
+        <YMax>5.405</YMax>
+        <AutoScaleX>true</AutoScaleX>
+        <AutoScaleY>true</AutoScaleY>
+        <SelectedPage>0</SelectedPage>
+        <ChannelsPerPage>16</ChannelsPerPage>
+        <OverlayChannels>true</OverlayChannels>
+        <ChannelOffset>0</ChannelOffset>
+        <HistoryLength>50</HistoryLength>
+        <WaveformBufferLength>1</WaveformBufferLength>
+      </MatVisualizer>
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1634,6 +1802,23 @@
       <Height>279</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <MatVisualizer>
+        <XMin>0</XMin>
+        <XMax>100000</XMax>
+        <YMin>5.447</YMin>
+        <YMax>5.453</YMax>
+        <AutoScaleX>true</AutoScaleX>
+        <AutoScaleY>true</AutoScaleY>
+        <SelectedPage>0</SelectedPage>
+        <ChannelsPerPage>16</ChannelsPerPage>
+        <OverlayChannels>true</OverlayChannels>
+        <ChannelOffset>0</ChannelOffset>
+        <HistoryLength>100</HistoryLength>
+        <WaveformBufferLength>1</WaveformBufferLength>
+      </MatVisualizer>
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1806,12 +1991,21 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
+<<<<<<< HEAD
       <X>161</X>
       <Y>358</Y>
     </Location>
     <Size>
       <Width>1032</Width>
       <Height>618</Height>
+=======
+      <X>82</X>
+      <Y>86</Y>
+    </Location>
+    <Size>
+      <Width>537</Width>
+      <Height>532</Height>
+>>>>>>> testing_step
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
@@ -1888,8 +2082,9 @@
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
-    <Visible>true</Visible>
+    <Visible>false</Visible>
     <Location>
+<<<<<<< HEAD
       <X>865</X>
       <Y>753</Y>
     </Location>
@@ -1902,6 +2097,16 @@
     <VisualizerSettings>
       <TableLayoutPanelVisualizer />
     </VisualizerSettings>
+=======
+      <X>1072</X>
+      <Y>276</Y>
+    </Location>
+    <Size>
+      <Width>463</Width>
+      <Height>406</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+>>>>>>> testing_step
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1916,35 +2121,48 @@
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
-    <Visible>true</Visible>
+    <Visible>false</Visible>
     <Location>
+<<<<<<< HEAD
       <X>1353</X>
       <Y>688</Y>
+=======
+      <X>1945</X>
+      <Y>-37</Y>
+>>>>>>> testing_step
     </Location>
     <Size>
-      <Width>336</Width>
-      <Height>279</Height>
+      <Width>1040</Width>
+      <Height>258</Height>
     </Size>
     <WindowState>Normal</WindowState>
+<<<<<<< HEAD
     <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <TableLayoutPanelVisualizer />
     </VisualizerSettings>
+=======
+>>>>>>> testing_step
   </DialogSettings>
   <DialogSettings>
-    <Visible>true</Visible>
+    <Visible>false</Visible>
     <Location>
+<<<<<<< HEAD
       <X>1426</X>
       <Y>151</Y>
     </Location>
     <Size>
       <Width>336</Width>
       <Height>631</Height>
+=======
+      <X>731</X>
+      <Y>464</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>493</Height>
+>>>>>>> testing_step
     </Size>
     <WindowState>Normal</WindowState>
-    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <ObjectTextVisualizer />
-    </VisualizerSettings>
   </DialogSettings>
 </VisualizerLayout>
