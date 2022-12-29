@@ -186,11 +186,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-<<<<<<< HEAD
                 <Value>1</Value>
-=======
-                <Value>2</Value>
->>>>>>> testing_step
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -206,11 +202,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-<<<<<<< HEAD
                 <Value>12</Value>
-=======
-                <Value>5</Value>
->>>>>>> testing_step
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -295,11 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-<<<<<<< HEAD
                 <Value>F102</Value>
-=======
-                <Value>FTest</Value>
->>>>>>> testing_step
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -350,11 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-<<<<<<< HEAD
                       <io:SearchPattern>F102</io:SearchPattern>
-=======
-                      <io:SearchPattern>FTest</io:SearchPattern>
->>>>>>> testing_step
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -600,11 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-<<<<<<< HEAD
                     <io:FileName>E:\Ben\Omer training\F102\Settings.csv</io:FileName>
-=======
-                    <io:FileName>E:\Ben\Omer training\FTest\Settings.csv</io:FileName>
->>>>>>> testing_step
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2658,11 +2638,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-<<<<<<< HEAD
                     <io:FileName>E:\Ben\Omer training\F102\events.csv</io:FileName>
-=======
-                    <io:FileName>E:\Ben\Omer training\FTest\events.csv</io:FileName>
->>>>>>> testing_step
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2692,11 +2668,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-<<<<<<< HEAD
                           <io:FileName>E:\Ben\Omer training\F102\Settings.csv</io:FileName>
-=======
-                          <io:FileName>E:\Ben\Omer training\FTest\Settings.csv</io:FileName>
->>>>>>> testing_step
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2757,11 +2729,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-<<<<<<< HEAD
                     <io:FileName>E:\Ben\Omer training\F102\licks.csv</io:FileName>
-=======
-                    <io:FileName>E:\Ben\Omer training\FTest\licks.csv</io:FileName>
->>>>>>> testing_step
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -2971,11 +2939,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-<<<<<<< HEAD
                                   <cv:FileName>E:\Ben\Omer training\F102\\Videos\28_12_2022_18_9\session_1\F102_.avi</cv:FileName>
-=======
-                                  <cv:FileName>E:\Ben\Omer training\FTest\\Videos\28_12_2022_13_17\session_1\FTest_.avi</cv:FileName>
->>>>>>> testing_step
                                   <cv:Suffix>Timestamp</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3250,11 +3214,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-<<<<<<< HEAD
                                   <dsp:Path>E:\Ben\Omer training\F102\\Analogs\28_12_2022_18_9\Sound\session_1\F102_.bin</dsp:Path>
-=======
-                                  <dsp:Path>E:\Ben\Omer training\FTest\\Analogs\28_12_2022_13_17\Sound\session_1\FTest_.bin</dsp:Path>
->>>>>>> testing_step
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3511,11 +3471,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-<<<<<<< HEAD
                                   <dsp:Path>E:\Ben\Omer training\F102\\Analogs\28_12_2022_18_9\Encoder\session_1\F102_.bin</dsp:Path>
-=======
-                                  <dsp:Path>E:\Ben\Omer training\FTest\\Analogs\28_12_2022_13_17\Encoder\session_1\FTest_.bin</dsp:Path>
->>>>>>> testing_step
                                   <dsp:Suffix>Timestamp</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -6144,11 +6100,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-<<<<<<< HEAD
                             <rx:DueTime>PT12S</rx:DueTime>
-=======
-                            <rx:DueTime>PT5S</rx:DueTime>
->>>>>>> testing_step
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -10060,11 +10012,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:BufferCount">
-<<<<<<< HEAD
                       <rx:Count>30</rx:Count>
-=======
-                      <rx:Count>32</rx:Count>
->>>>>>> testing_step
                       <rx:Skip xsi:nil="true" />
                     </Combinator>
                   </Expression>
@@ -10570,11 +10518,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-<<<<<<< HEAD
           <Value>3</Value>
-=======
-          <Value>6</Value>
->>>>>>> testing_step
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
