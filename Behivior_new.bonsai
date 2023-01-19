@@ -31,7 +31,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>1</Value>
+                <Value>0</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>20</Value>
+                <Value>15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.75</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -10694,7 +10694,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>1</Value>
+                            <Value>0</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -10707,7 +10707,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0</Value>
+                            <Value>1</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -10744,6 +10744,34 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Expression xsi:type="Divide" />
                         <Expression xsi:type="MulticastSubject">
                           <Name>CR Rate</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:BufferCount">
+                            <rx:Count>10</rx:Count>
+                            <rx:Skip>1</rx:Skip>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="dsp:ConvertToArray">
+                          <dsp:Depth xsi:nil="true" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:ConvertFromArray">
+                            <dsp:Size>
+                              <dsp:Width>0</dsp:Width>
+                              <dsp:Height>0</dsp:Height>
+                            </dsp:Size>
+                            <dsp:Depth xsi:nil="true" />
+                            <dsp:Channels xsi:nil="true" />
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Average" />
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Val0</Selector>
+                        </Expression>
+                        <Expression xsi:type="MulticastSubject">
+                          <Name>FA running</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
                           <Name>Miss</Name>
@@ -10806,6 +10834,34 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Expression xsi:type="MulticastSubject">
                           <Name>Hit Rate</Name>
                         </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:BufferCount">
+                            <rx:Count>10</rx:Count>
+                            <rx:Skip>1</rx:Skip>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="dsp:ConvertToArray">
+                          <dsp:Depth xsi:nil="true" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:ConvertFromArray">
+                            <dsp:Size>
+                              <dsp:Width>0</dsp:Width>
+                              <dsp:Height>0</dsp:Height>
+                            </dsp:Size>
+                            <dsp:Depth xsi:nil="true" />
+                            <dsp:Channels xsi:nil="true" />
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Average" />
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Val0</Selector>
+                        </Expression>
+                        <Expression xsi:type="MulticastSubject">
+                          <Name>Hit running</Name>
+                        </Expression>
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
@@ -10816,6 +10872,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Edge From="5" To="6" Label="Source2" />
                         <Edge From="6" To="7" Label="Source1" />
                         <Edge From="7" To="14" Label="Source1" />
+                        <Edge From="7" To="17" Label="Source1" />
                         <Edge From="8" To="9" Label="Source1" />
                         <Edge From="9" To="10" Label="Source1" />
                         <Edge From="10" To="11" Label="Source1" />
@@ -10826,20 +10883,31 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Edge From="15" To="16" Label="Source1" />
                         <Edge From="17" To="18" Label="Source1" />
                         <Edge From="18" To="19" Label="Source1" />
-                        <Edge From="19" To="23" Label="Source1" />
+                        <Edge From="19" To="20" Label="Source1" />
                         <Edge From="20" To="21" Label="Source1" />
                         <Edge From="21" To="22" Label="Source1" />
-                        <Edge From="22" To="23" Label="Source2" />
                         <Edge From="23" To="24" Label="Source1" />
-                        <Edge From="24" To="31" Label="Source1" />
-                        <Edge From="25" To="26" Label="Source1" />
+                        <Edge From="24" To="25" Label="Source1" />
+                        <Edge From="25" To="29" Label="Source1" />
                         <Edge From="26" To="27" Label="Source1" />
                         <Edge From="27" To="28" Label="Source1" />
-                        <Edge From="28" To="29" Label="Source1" />
+                        <Edge From="28" To="29" Label="Source2" />
                         <Edge From="29" To="30" Label="Source1" />
-                        <Edge From="30" To="31" Label="Source2" />
+                        <Edge From="30" To="37" Label="Source1" />
+                        <Edge From="30" To="40" Label="Source1" />
                         <Edge From="31" To="32" Label="Source1" />
                         <Edge From="32" To="33" Label="Source1" />
+                        <Edge From="33" To="34" Label="Source1" />
+                        <Edge From="34" To="35" Label="Source1" />
+                        <Edge From="35" To="36" Label="Source1" />
+                        <Edge From="36" To="37" Label="Source2" />
+                        <Edge From="37" To="38" Label="Source1" />
+                        <Edge From="38" To="39" Label="Source1" />
+                        <Edge From="40" To="41" Label="Source1" />
+                        <Edge From="41" To="42" Label="Source1" />
+                        <Edge From="42" To="43" Label="Source1" />
+                        <Edge From="43" To="44" Label="Source1" />
+                        <Edge From="44" To="45" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -10919,6 +10987,22 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>CR Rate</Name>
                   </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>Hit running</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>FA running</Name>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -10930,6 +11014,8 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="0" To="15" Label="Source1" />
                   <Edge From="0" To="17" Label="Source1" />
                   <Edge From="0" To="19" Label="Source1" />
+                  <Edge From="0" To="21" Label="Source1" />
+                  <Edge From="0" To="23" Label="Source1" />
                   <Edge From="1" To="3" Label="Source1" />
                   <Edge From="2" To="3" Label="Source2" />
                   <Edge From="3" To="4" Label="Source1" />
@@ -10941,6 +11027,8 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="15" To="16" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
                   <Edge From="19" To="20" Label="Source1" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="23" To="24" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -10993,34 +11081,44 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
         <viz:Min xsi:nil="true" />
         <viz:Max xsi:nil="true" />
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:BufferCount">
-          <rx:Count>10</rx:Count>
-          <rx:Skip>1</rx:Skip>
-        </Combinator>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="rx:BufferCount">
+            <rx:Count>10</rx:Count>
+            <rx:Skip>1</rx:Skip>
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="dsp:ConvertToArray">
-        <dsp:Depth xsi:nil="true" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:ConvertFromArray">
-          <dsp:Size>
-            <dsp:Width>0</dsp:Width>
-            <dsp:Height>0</dsp:Height>
-          </dsp:Size>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="dsp:ConvertToArray">
           <dsp:Depth xsi:nil="true" />
-          <dsp:Channels xsi:nil="true" />
-        </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:Average" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:ConvertFromArray">
+            <dsp:Size>
+              <dsp:Width>0</dsp:Width>
+              <dsp:Height>0</dsp:Height>
+            </dsp:Size>
+            <dsp:Depth xsi:nil="true" />
+            <dsp:Channels xsi:nil="true" />
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:SymbolType>Square</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:Average" />
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="viz:RollingGraphBuilder">
+          <viz:SymbolType>Square</viz:SymbolType>
+          <viz:LineWidth>1</viz:LineWidth>
+          <viz:Capacity xsi:nil="true" />
+          <viz:Min xsi:nil="true" />
+          <viz:Max xsi:nil="true" />
+        </Builder>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>CR Rate</Name>
@@ -11032,37 +11130,47 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
         <viz:Min xsi:nil="true" />
         <viz:Max xsi:nil="true" />
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:BufferCount">
-          <rx:Count>10</rx:Count>
-          <rx:Skip>1</rx:Skip>
-        </Combinator>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="rx:BufferCount">
+            <rx:Count>10</rx:Count>
+            <rx:Skip>1</rx:Skip>
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="dsp:ConvertToArray">
-        <dsp:Depth xsi:nil="true" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:ConvertFromArray">
-          <dsp:Size>
-            <dsp:Width>0</dsp:Width>
-            <dsp:Height>0</dsp:Height>
-          </dsp:Size>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="dsp:ConvertToArray">
           <dsp:Depth xsi:nil="true" />
-          <dsp:Channels xsi:nil="true" />
-        </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dsp:Average" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:ConvertFromArray">
+            <dsp:Size>
+              <dsp:Width>0</dsp:Width>
+              <dsp:Height>0</dsp:Height>
+            </dsp:Size>
+            <dsp:Depth xsi:nil="true" />
+            <dsp:Channels xsi:nil="true" />
+          </Combinator>
+        </Builder>
       </Expression>
-      <Expression xsi:type="viz:RollingGraphBuilder">
-        <viz:SymbolType>Square</viz:SymbolType>
-        <viz:LineWidth>1</viz:LineWidth>
-        <viz:Capacity xsi:nil="true" />
-        <viz:Min xsi:nil="true" />
-        <viz:Max xsi:nil="true" />
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="dsp:Average" />
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="viz:RollingGraphBuilder">
+          <viz:SymbolType>Square</viz:SymbolType>
+          <viz:LineWidth>1</viz:LineWidth>
+          <viz:Capacity xsi:nil="true" />
+          <viz:Min xsi:nil="true" />
+          <viz:Max xsi:nil="true" />
+        </Builder>
       </Expression>
       <Expression xsi:type="viz:TableLayoutPanelBuilder">
-        <viz:Name>Hit/CR</viz:Name>
+        <viz:Name>Hit/FA</viz:Name>
         <viz:ColumnCount>2</viz:ColumnCount>
         <viz:RowCount>2</viz:RowCount>
         <viz:ColumnStyles />
@@ -11297,6 +11405,26 @@ def process(value):
           </Workflow>
         </Builder>
       </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>Hit running</Name>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:SymbolType>Square</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>FA running</Name>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:SymbolType>Square</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
@@ -11328,6 +11456,8 @@ def process(value):
       <Edge From="44" To="46" Label="Source2" />
       <Edge From="45" To="46" Label="Source1" />
       <Edge From="46" To="47" Label="Source1" />
+      <Edge From="54" To="55" Label="Source1" />
+      <Edge From="56" To="57" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
