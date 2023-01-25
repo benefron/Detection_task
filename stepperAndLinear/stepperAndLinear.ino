@@ -49,12 +49,12 @@ int myrandmove = myrand1+myrand2 ; // sum movement of myrand1+myrand2
 int randangle; // rand option between 2 stimulus.
 int randopt; // switch case for stimulus.
 // define the position of the objects on the wheel
-int al_1 = 1 * 33;
-int al_2 = 3 * 33;
+int al_1 = 0 * 33;
+int al_2 = 1 * 33;
 int at_1 = 2 * 33;
 int at_2 = 5 * 33;  
-int no_1 = 0 * 33;
-int no_2 = 4 * 33;
+int no_1 = 2 * 33;
+int no_2 = 3 * 33;
 
 
 
