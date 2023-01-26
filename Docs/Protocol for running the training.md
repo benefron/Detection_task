@@ -24,14 +24,15 @@ Protocol for running the training
 20. Turn off the set light and position the camera in a way you can see the mouse over the objects, the whisking pad and the eye.
 21. In the Bonsai software, in the camera tab, you can adjust the crop of for a better roi.
 22. Close the curtains
-23. Load the animal using F10
-24. Press the settings node and see that the settings match the loaded settings
-25. Press the lick report node and give some water using Shift+W to make sure licks are recorded, if they are not restart the Bonsai software and reload the animal
-26. Close the lick report node
-27. Turn off the lights in the room and start the session with F12
-28. Make sure that the trial is running properly, that the buffer is appropriate and that the protocol doesn't get stuck
-29. Close the computer monitor, the entrance curtain and leave the room
-30. continue monitoring on using remote desktop
+23. Press Shift+F to return motor to starting position
+24. Load the animal using F10
+25. Press the settings node and see that the settings match the loaded settings
+26. Press the lick report node and give some water using Shift+W to make sure licks are recorded, if they are not restart the Bonsai software and reload the animal
+27. Close the lick report node
+28. Turn off the lights in the room and start the session with F12
+29. Make sure that the trial is running properly, that the buffer is appropriate and that the protocol doesn't get stuck
+30. Close the computer monitor, the entrance curtain and leave the room
+31. continue monitoring on using remote desktop
 
 
 When training is done:
