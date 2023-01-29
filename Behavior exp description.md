@@ -15,10 +15,8 @@ Bonsai:
 				- Level: Sets the level of training 0 - just lick 1 - motor movement 2 - Object presentation 3 - test with attaunated object
 						0 - Give reward for licking the water spout. difficulty determines if a reward is given always or 
 							just if the mouse licked
-						1 - Introduces motor movement as trail initiation. difficulty same as for level 0.
-						2 - Main training, can control presentation of the rewarded object 0-0.5 unrewarded object
-							0.5-1 unrewarded object
-						3 - Testing, give three options: noisy, attanuated, no object
+						1 - Main training can control with difficulty the precentage of go/no go trials and also with P2I the precent of trials that the mouse has to lick vs gets reward anyway
+						2 - Has additional 
 				- Time between: The time of each trail in sec 
 				- Time out: Time that the animal is punished by no further trails after failing
 				- Reward time: The time of the lick port gioving reward (will be in uL after calibration
