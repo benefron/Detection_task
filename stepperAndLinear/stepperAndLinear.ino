@@ -5,7 +5,7 @@
 // Define stepper motors properties
 #define MOTOR_STEPS 200
 #define RPM 30
-#define RPM_L 300
+#define RPM_L 900
 #define SLEEP_L 15
 #define SLEEP 2
 #define MICROSTEPS_L 1
@@ -92,8 +92,8 @@ void loop() {
 
  
     // generate random numbers to rotate motor
- myrand1  = random(-250,250) ; 
- myrand2  = random(-250,250) ;
+ myrand1  = random(-180,180) ; 
+ myrand2  = random(-180,180) ;
  myrandmove = myrand1+myrand2;
  // genrate random option from 2 identical stimulus.
       randangle = random(1,3);
@@ -183,17 +183,17 @@ void loop() {
           }
 
           stepper.move(-stepperAngle);
-          delay(150);
+          delay(50);
           stepper.move(myrand1*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move(myrand2*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));       
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum");
-          delay(1000);
+          
 
-          delay(500);
+          delay(100);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_ALUM,HIGH);
@@ -214,16 +214,15 @@ void loop() {
           break;
           }
           stepper.move(-stepperAngle);
-          delay(150);
+          delay(50);
           stepper.move(myrand1*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move(myrand2*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum silenced");
-          delay(1000);
-          delay(500);
+          delay(100);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_MUT,HIGH);
@@ -248,16 +247,15 @@ void loop() {
           }
          
           stepper.move(-stepperAngle);
-          delay(200);
+          delay(50);
           stepper.move(myrand1*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move(myrand2*MICROSTEPS);
-          delay(150);
+          delay(50);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle;
           Serial.println("non");
-          delay(1000);
-          delay(500);
+          delay(100);
           digitalWrite(R_OBJ,HIGH);
           delay(100);
           digitalWrite(R_NON,HIGH);
