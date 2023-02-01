@@ -5,10 +5,10 @@
 // Define stepper motors properties
 #define MOTOR_STEPS 200
 #define RPM 45
-#define RPM_L 440
+#define RPM_L 460
 #define SLEEP_L 15
 #define SLEEP 2
-#define MICROSTEPS_L 16
+#define MICROSTEPS_L 1
 #define MICROSTEPS 1
 #define DIR_L 13
 #define STEP_L 14
@@ -92,8 +92,8 @@ void loop() {
 
  
     // generate random numbers to rotate motor
- myrand1  = random(10,180) * random(-1,2) ; 
- myrand2  = random(10,180) * random(-1,2);
+ myrand1  = random(20,180) * random(-1,2); 
+ myrand2  = random(20,180) * random(-1,2);
  myrandmove = myrand1+myrand2;
  // genrate random option from 2 identical stimulus.
       randangle = random(1,3);
