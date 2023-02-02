@@ -5,7 +5,7 @@
 // Define stepper motors properties
 #define MOTOR_STEPS 200
 #define RPM 45
-#define RPM_L 460
+#define RPM_L 450
 #define SLEEP_L 15
 #define SLEEP 2
 #define MICROSTEPS_L 1
