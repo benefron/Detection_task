@@ -31,6 +31,7 @@
 #define R_MUT 7
 #define R_NON 6
 #define R_OBJ 9
+#define R_reset 4
 
 // Create interrupt pin
 const byte interruptPin = 12;
@@ -165,6 +166,8 @@ void loop() {
 	    digitalWrite(L_ST,LOW);
 	    digitalWrite(LFWD,LOW);
       digitalWrite(L_CATCH,LOW);
+      digitalWrite(R_reset,LOW);
+      
     
       
        
@@ -270,8 +273,8 @@ void loop() {
 		{
 			linnear.enable();
       delay(50);
-			linnear.rotate(-whiskPos);
-			whiskPos = -whiskPos;
+			linnear.rotate(whiskPos);
+		//	whiskPos = -whiskPos;
       delay(50);
 			linnear.disable();
       Serial.println("motor moved");
@@ -283,14 +286,27 @@ void loop() {
      if (digitalRead(CATCH_FWD) == HIGH || ch == '.')
 		{
 			linnear.enable();
-      temp_catch = whiskPos + catch_dis;
+      temp_catch = whiskPos - catch_dis;
 			linnear.rotate(-temp_catch);
-      catch_dis = - catch_dis;
-			whiskPos = -whiskPos;
+     // catch_dis = - catch_dis;
+		//	whiskPos = -whiskPos;
 			linnear.disable();
       delay(100);
 			digitalWrite(L_CATCH,HIGH);
 			delay(100);
+			
+		}
+
+    if (ch == 'b')
+		{
+			linnear.enable();
+      
+			linnear.rotate(-36000);
+      
+			linnear.disable();
+      delay(20);
+			digitalWrite(R_reset,HIGH);
+			delay(20);
 			
 		}
       
