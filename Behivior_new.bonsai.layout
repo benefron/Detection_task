@@ -1900,8 +1900,8 @@
         <Y>3</Y>
       </Location>
       <Size>
-        <Width>1506</Width>
-        <Height>903</Height>
+        <Width>1026</Width>
+        <Height>2383</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -2075,7 +2075,7 @@
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
-    <Visible>false</Visible>
+    <Visible>true</Visible>
     <Location>
       <X>909</X>
       <Y>40</Y>
@@ -2085,6 +2085,83 @@
       <Height>674</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <TableLayoutPanelVisualizer>
+        <MashupSettings>
+          <Source>29</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>0</Min>
+              <Max>0.6</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>55</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>-1</Min>
+              <Max>1</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>36</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>-1</Min>
+              <Max>1</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>57</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>-1</Min>
+              <Max>1</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>60</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>-1</Min>
+              <Max>1</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>62</Source>
+          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <RollingGraphVisualizer>
+              <Capacity>0</Capacity>
+              <Min>-1</Min>
+              <Max>1</Max>
+              <AutoScale>true</AutoScale>
+            </RollingGraphVisualizer>
+          </VisualizerSettings>
+        </MashupSettings>
+      </TableLayoutPanelVisualizer>
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -2300,7 +2377,7 @@
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
-    <Visible>true</Visible>
+    <Visible>false</Visible>
     <Location>
       <X>1255</X>
       <Y>271</Y>
@@ -2310,9 +2387,53 @@
       <Height>519</Height>
     </Size>
     <WindowState>Normal</WindowState>
-    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <ObjectTextVisualizer />
-    </VisualizerSettings>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
   </DialogSettings>
 </VisualizerLayout>

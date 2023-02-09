@@ -31,7 +31,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>1</Value>
+                <Value>2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -2998,7 +2998,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\9_2_2023_8_35\session_1\Ftest_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\9_2_2023_8_57\session_1\Ftest_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3273,7 +3273,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\9_2_2023_8_35\Sound\session_1\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\9_2_2023_8_57\Sound\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3530,7 +3530,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\9_2_2023_8_35\Encoder\session_1\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\9_2_2023_8_57\Encoder\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -7382,7 +7382,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>022 - Correct rejection</Value>
+                                        <Value>002 - Correct rejection</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
@@ -7406,7 +7406,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>023 - False alarm</Value>
+                                        <Value>003 - False alarm</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
@@ -7889,7 +7889,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="MulticastSubject">
-                                <Name>TotalFA</Name>
+                                <Name>AttTotalFA</Name>
                               </Expression>
                               <Expression xsi:type="rx:SelectMany">
                                 <Workflow>
@@ -7905,11 +7905,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>002 - Correct rejection</Value>
+                                        <Value>004 - Att Correct rejection</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
-                                      <Name>CR</Name>
+                                      <Name>AttCR</Name>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
                                       <Name>Events</Name>
@@ -7929,11 +7929,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>003 - False alarm</Value>
+                                        <Value>005 - Att False alarm</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
-                                      <Name>FA</Name>
+                                      <Name>AttFA</Name>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
                                       <Name>Events</Name>
@@ -9390,7 +9390,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="MulticastSubject">
-                                <Name>TotalFA</Name>
+                                <Name>AttTotalFA</Name>
                               </Expression>
                               <Expression xsi:type="rx:SelectMany">
                                 <Workflow>
@@ -9406,11 +9406,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>022 - Correct rejection</Value>
+                                        <Value>004 - Correct rejection</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
-                                      <Name>CR</Name>
+                                      <Name>AttCR</Name>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
                                       <Name>Events</Name>
@@ -9430,11 +9430,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="StringProperty">
-                                        <Value>023 - False alarm</Value>
+                                        <Value>005 - False alarm</Value>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
-                                      <Name>FA</Name>
+                                      <Name>AttFA</Name>
                                     </Expression>
                                     <Expression xsi:type="MulticastSubject">
                                       <Name>Events</Name>
@@ -9707,7 +9707,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT15S</rx:DueTime>
+                            <rx:DueTime>PT1S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -11087,6 +11087,95 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Expression xsi:type="MulticastSubject">
                           <Name>Hit running</Name>
                         </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>AttCR</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Skip">
+                            <rx:Count>1</rx:Count>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="DoubleProperty">
+                            <Value>0</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>AttFA</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Skip">
+                            <rx:Count>1</rx:Count>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="DoubleProperty">
+                            <Value>1</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Merge" />
+                        </Expression>
+                        <Expression xsi:type="rx:Accumulate" />
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>AttTotalFA</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Skip">
+                            <rx:Count>1</rx:Count>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="DoubleProperty">
+                            <Value>1</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:ElementIndex" />
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Index</Selector>
+                        </Expression>
+                        <Expression xsi:type="Add">
+                          <Operand xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:WithLatestFrom" />
+                        </Expression>
+                        <Expression xsi:type="Divide" />
+                        <Expression xsi:type="MulticastSubject">
+                          <Name>AttCR Rate</Name>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:BufferCount">
+                            <rx:Count>10</rx:Count>
+                            <rx:Skip>1</rx:Skip>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="dsp:ConvertToArray">
+                          <dsp:Depth xsi:nil="true" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:ConvertFromArray">
+                            <dsp:Size>
+                              <dsp:Width>0</dsp:Width>
+                              <dsp:Height>0</dsp:Height>
+                            </dsp:Size>
+                            <dsp:Depth xsi:nil="true" />
+                            <dsp:Channels xsi:nil="true" />
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Average" />
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Val0</Selector>
+                        </Expression>
+                        <Expression xsi:type="MulticastSubject">
+                          <Name>AttFA running</Name>
+                        </Expression>
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
@@ -11133,6 +11222,28 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Edge From="42" To="43" Label="Source1" />
                         <Edge From="43" To="44" Label="Source1" />
                         <Edge From="44" To="45" Label="Source1" />
+                        <Edge From="46" To="47" Label="Source1" />
+                        <Edge From="47" To="48" Label="Source1" />
+                        <Edge From="48" To="52" Label="Source1" />
+                        <Edge From="49" To="50" Label="Source1" />
+                        <Edge From="50" To="51" Label="Source1" />
+                        <Edge From="51" To="52" Label="Source2" />
+                        <Edge From="52" To="53" Label="Source1" />
+                        <Edge From="52" To="63" Label="Source1" />
+                        <Edge From="53" To="60" Label="Source1" />
+                        <Edge From="54" To="55" Label="Source1" />
+                        <Edge From="55" To="56" Label="Source1" />
+                        <Edge From="56" To="57" Label="Source1" />
+                        <Edge From="57" To="58" Label="Source1" />
+                        <Edge From="58" To="59" Label="Source1" />
+                        <Edge From="59" To="60" Label="Source2" />
+                        <Edge From="60" To="61" Label="Source1" />
+                        <Edge From="61" To="62" Label="Source1" />
+                        <Edge From="63" To="64" Label="Source1" />
+                        <Edge From="64" To="65" Label="Source1" />
+                        <Edge From="65" To="66" Label="Source1" />
+                        <Edge From="66" To="67" Label="Source1" />
+                        <Edge From="67" To="68" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -11228,6 +11339,46 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>FA running</Name>
                   </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>FA</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>AttFA</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>CR</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>AttCR</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>totalFA</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>AttTotalFA</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>AttCR Rate</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>AttFA running</Name>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -11241,6 +11392,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="0" To="19" Label="Source1" />
                   <Edge From="0" To="21" Label="Source1" />
                   <Edge From="0" To="23" Label="Source1" />
+                  <Edge From="0" To="25" Label="Source1" />
+                  <Edge From="0" To="27" Label="Source1" />
+                  <Edge From="0" To="29" Label="Source1" />
+                  <Edge From="0" To="31" Label="Source1" />
+                  <Edge From="0" To="33" Label="Source1" />
                   <Edge From="1" To="3" Label="Source1" />
                   <Edge From="2" To="3" Label="Source2" />
                   <Edge From="3" To="4" Label="Source1" />
@@ -11254,6 +11410,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="19" To="20" Label="Source1" />
                   <Edge From="21" To="22" Label="Source1" />
                   <Edge From="23" To="24" Label="Source1" />
+                  <Edge From="25" To="26" Label="Source1" />
+                  <Edge From="27" To="28" Label="Source1" />
+                  <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="31" To="32" Label="Source1" />
+                  <Edge From="33" To="34" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -11397,7 +11558,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
       <Expression xsi:type="viz:TableLayoutPanelBuilder">
         <viz:Name>Hit/FA</viz:Name>
         <viz:ColumnCount>2</viz:ColumnCount>
-        <viz:RowCount>2</viz:RowCount>
+        <viz:RowCount>3</viz:RowCount>
         <viz:ColumnStyles />
         <viz:RowStyles />
         <viz:CellSpans />
@@ -11656,6 +11817,26 @@ def process(value):
           <io:NewLine>\r\n</io:NewLine>
         </Combinator>
       </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>AttCR Rate</Name>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:SymbolType>Square</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>AttFA running</Name>
+      </Expression>
+      <Expression xsi:type="viz:RollingGraphBuilder">
+        <viz:SymbolType>Square</viz:SymbolType>
+        <viz:LineWidth>1</viz:LineWidth>
+        <viz:Capacity xsi:nil="true" />
+        <viz:Min xsi:nil="true" />
+        <viz:Max xsi:nil="true" />
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="1" To="2" Label="Source1" />
@@ -11689,6 +11870,8 @@ def process(value):
       <Edge From="46" To="47" Label="Source1" />
       <Edge From="54" To="55" Label="Source1" />
       <Edge From="56" To="57" Label="Source1" />
+      <Edge From="59" To="60" Label="Source1" />
+      <Edge From="61" To="62" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
