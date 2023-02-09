@@ -4,7 +4,7 @@
 
 // Define stepper motors properties
 #define MOTOR_STEPS 200
-#define RPM 45
+#define RPM 40
 #define RPM_L 450
 #define SLEEP_L 15
 #define SLEEP 2
@@ -50,10 +50,10 @@ int randangle; // rand option between 2 stimulus.
 int randopt; // switch case for stimulus.
 // define the position of the objects on the wheel
 int al_1 = 0 * 33;
-int al_2 = 1 * 33;
-int at_1 = 4 * 33;
-int at_2 = 5 * 33;  
-int no_1 = 2 * 33;
+int al_2 = 5 * 33;
+int at_1 = 2 * 33;
+int at_2 = 4 * 33;  
+int no_1 = 1 * 33;
 int no_2 = 3 * 33;
 
 
@@ -183,11 +183,11 @@ void loop() {
           }
 
           stepper.move(-stepperAngle);
-          delay(50);
+          delay(75);
           stepper.move(myrand1*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move(myrand2*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));       
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum");
@@ -214,11 +214,11 @@ void loop() {
           break;
           }
           stepper.move(-stepperAngle);
-          delay(50);
+          delay(75);
           stepper.move(myrand1*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move(myrand2*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle*MICROSTEPS;
           Serial.println("aluminum silenced");
@@ -247,11 +247,11 @@ void loop() {
           }
          
           stepper.move(-stepperAngle);
-          delay(50);
+          delay(75);
           stepper.move(myrand1*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move(myrand2*MICROSTEPS);
-          delay(50);
+          delay(75);
           stepper.move((-myrandmove*MICROSTEPS)+(tempAngle*MICROSTEPS));   
           stepperAngle = tempAngle;
           Serial.println("non");
@@ -269,9 +269,12 @@ void loop() {
         if (digitalRead(LFWD) == HIGH || ch == 'f')
 		{
 			linnear.enable();
+      delay(50);
 			linnear.rotate(-whiskPos);
 			whiskPos = -whiskPos;
+      delay(50);
 			linnear.disable();
+      Serial.println("motor moved");
       delay(100);
 			digitalWrite(L_ST,HIGH);
 			delay(100);
