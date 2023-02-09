@@ -188,8 +188,8 @@
         <Y>3</Y>
       </Location>
       <Size>
-        <Width>1026</Width>
-        <Height>2383</Height>
+        <Width>802</Width>
+        <Height>790</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -452,8 +452,8 @@
             <Y>3</Y>
           </Location>
           <Size>
-            <Width>1026</Width>
-            <Height>2383</Height>
+            <Width>802</Width>
+            <Height>790</Height>
           </Size>
           <WindowState>Normal</WindowState>
         </EditorDialogSettings>
@@ -952,7 +952,7 @@
             </Size>
             <WindowState>Normal</WindowState>
           </DialogSettings>
-          <DialogSettings>
+          <DialogSettings xsi:type="WorkflowEditorSettings">
             <Visible>false</Visible>
             <Location>
               <X>0</X>
@@ -963,6 +963,18 @@
               <Height>0</Height>
             </Size>
             <WindowState>Normal</WindowState>
+            <EditorDialogSettings>
+              <Visible>false</Visible>
+              <Location>
+                <X>3</X>
+                <Y>3</Y>
+              </Location>
+              <Size>
+                <Width>1026</Width>
+                <Height>2383</Height>
+              </Size>
+              <WindowState>Normal</WindowState>
+            </EditorDialogSettings>
           </DialogSettings>
           <DialogSettings>
             <Visible>false</Visible>
@@ -1481,16 +1493,113 @@
             <WindowState>Normal</WindowState>
           </DialogSettings>
           <DialogSettings>
-            <Visible>false</Visible>
+            <Visible>true</Visible>
             <Location>
-              <X>129</X>
-              <Y>113</Y>
+              <X>311</X>
+              <Y>477</Y>
             </Location>
             <Size>
               <Width>563</Width>
               <Height>501</Height>
             </Size>
             <WindowState>Normal</WindowState>
+            <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
+            <VisualizerSettings>
+              <TableLayoutPanelVisualizer>
+                <MashupSettings>
+                  <Source>37</Source>
+                  <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
+                  <VisualizerSettings>
+                    <RollingGraphVisualizer>
+                      <Capacity>0</Capacity>
+                      <Min>0.3</Min>
+                      <Max>1.1</Max>
+                      <AutoScale>false</AutoScale>
+                    </RollingGraphVisualizer>
+                  </VisualizerSettings>
+                </MashupSettings>
+                <MashupSettings>
+                  <Source>55</Source>
+                  <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+                  <VisualizerSettings>
+                    <MatVisualizer>
+                      <XMin>0</XMin>
+                      <XMax>1</XMax>
+                      <YMin>0</YMin>
+                      <YMax>1.1</YMax>
+                      <AutoScaleX>true</AutoScaleX>
+                      <AutoScaleY>true</AutoScaleY>
+                      <SelectedPage>0</SelectedPage>
+                      <ChannelsPerPage>16</ChannelsPerPage>
+                      <OverlayChannels>true</OverlayChannels>
+                      <ChannelOffset>0</ChannelOffset>
+                      <HistoryLength>1</HistoryLength>
+                      <WaveformBufferLength>1</WaveformBufferLength>
+                    </MatVisualizer>
+                  </VisualizerSettings>
+                </MashupSettings>
+                <MashupSettings>
+                  <Source>11</Source>
+                  <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+                  <VisualizerSettings>
+                    <MatVisualizer>
+                      <XMin>0</XMin>
+                      <XMax>1</XMax>
+                      <YMin>0</YMin>
+                      <YMax>1.1</YMax>
+                      <AutoScaleX>true</AutoScaleX>
+                      <AutoScaleY>true</AutoScaleY>
+                      <SelectedPage>0</SelectedPage>
+                      <ChannelsPerPage>16</ChannelsPerPage>
+                      <OverlayChannels>true</OverlayChannels>
+                      <ChannelOffset>0</ChannelOffset>
+                      <HistoryLength>1</HistoryLength>
+                      <WaveformBufferLength>1</WaveformBufferLength>
+                    </MatVisualizer>
+                  </VisualizerSettings>
+                </MashupSettings>
+                <MashupSettings>
+                  <Source>61</Source>
+                  <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+                  <VisualizerSettings>
+                    <MatVisualizer>
+                      <XMin>0</XMin>
+                      <XMax>1</XMax>
+                      <YMin>0</YMin>
+                      <YMax>1.1</YMax>
+                      <AutoScaleX>true</AutoScaleX>
+                      <AutoScaleY>true</AutoScaleY>
+                      <SelectedPage>0</SelectedPage>
+                      <ChannelsPerPage>16</ChannelsPerPage>
+                      <OverlayChannels>true</OverlayChannels>
+                      <ChannelOffset>0</ChannelOffset>
+                      <HistoryLength>1</HistoryLength>
+                      <WaveformBufferLength>1</WaveformBufferLength>
+                    </MatVisualizer>
+                  </VisualizerSettings>
+                </MashupSettings>
+                <MashupSettings>
+                  <Source>34</Source>
+                  <VisualizerTypeName>Bonsai.Dsp.Design.MatVisualizer</VisualizerTypeName>
+                  <VisualizerSettings>
+                    <MatVisualizer>
+                      <XMin>0</XMin>
+                      <XMax>1</XMax>
+                      <YMin>0</YMin>
+                      <YMax>1.1</YMax>
+                      <AutoScaleX>true</AutoScaleX>
+                      <AutoScaleY>true</AutoScaleY>
+                      <SelectedPage>0</SelectedPage>
+                      <ChannelsPerPage>16</ChannelsPerPage>
+                      <OverlayChannels>true</OverlayChannels>
+                      <ChannelOffset>0</ChannelOffset>
+                      <HistoryLength>1</HistoryLength>
+                      <WaveformBufferLength>1</WaveformBufferLength>
+                    </MatVisualizer>
+                  </VisualizerSettings>
+                </MashupSettings>
+              </TableLayoutPanelVisualizer>
+            </VisualizerSettings>
           </DialogSettings>
         </EditorVisualizerLayout>
       </DialogSettings>
@@ -1563,8 +1672,8 @@
       <Y>50</Y>
     </Location>
     <Size>
-      <Width>336</Width>
-      <Height>369</Height>
+      <Width>556</Width>
+      <Height>590</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
@@ -1723,6 +1832,10 @@
           <Height>279</Height>
         </Size>
         <WindowState>Normal</WindowState>
+        <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <IplImageVisualizer />
+        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -1921,78 +2034,6 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
       <X>1309</X>
       <Y>170</Y>
     </Location>
@@ -2029,79 +2070,31 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>2189</X>
+      <Y>17</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>981</Width>
+      <Height>699</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>909</X>
-      <Y>40</Y>
+      <X>79</X>
+      <Y>69</Y>
     </Location>
     <Size>
-      <Width>917</Width>
-      <Height>674</Height>
+      <Width>1076</Width>
+      <Height>406</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <TableLayoutPanelVisualizer>
         <MashupSettings>
-          <Source>29</Source>
-          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
-          <VisualizerSettings>
-            <RollingGraphVisualizer>
-              <Capacity>0</Capacity>
-              <Min>0</Min>
-              <Max>0.6</Max>
-              <AutoScale>true</AutoScale>
-            </RollingGraphVisualizer>
-          </VisualizerSettings>
-        </MashupSettings>
-        <MashupSettings>
-          <Source>55</Source>
+          <Source>32</Source>
           <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
           <VisualizerSettings>
             <RollingGraphVisualizer>
@@ -2113,43 +2106,7 @@
           </VisualizerSettings>
         </MashupSettings>
         <MashupSettings>
-          <Source>36</Source>
-          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
-          <VisualizerSettings>
-            <RollingGraphVisualizer>
-              <Capacity>0</Capacity>
-              <Min>-1</Min>
-              <Max>1</Max>
-              <AutoScale>true</AutoScale>
-            </RollingGraphVisualizer>
-          </VisualizerSettings>
-        </MashupSettings>
-        <MashupSettings>
-          <Source>57</Source>
-          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
-          <VisualizerSettings>
-            <RollingGraphVisualizer>
-              <Capacity>0</Capacity>
-              <Min>-1</Min>
-              <Max>1</Max>
-              <AutoScale>true</AutoScale>
-            </RollingGraphVisualizer>
-          </VisualizerSettings>
-        </MashupSettings>
-        <MashupSettings>
-          <Source>60</Source>
-          <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
-          <VisualizerSettings>
-            <RollingGraphVisualizer>
-              <Capacity>0</Capacity>
-              <Min>-1</Min>
-              <Max>1</Max>
-              <AutoScale>true</AutoScale>
-            </RollingGraphVisualizer>
-          </VisualizerSettings>
-        </MashupSettings>
-        <MashupSettings>
-          <Source>62</Source>
+          <Source>49</Source>
           <VisualizerTypeName>Bonsai.Design.Visualizers.RollingGraphVisualizer</VisualizerTypeName>
           <VisualizerSettings>
             <RollingGraphVisualizer>
@@ -2238,19 +2195,19 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>275</X>
-      <Y>155</Y>
+      <X>1041</X>
+      <Y>146</Y>
     </Location>
     <Size>
-      <Width>626</Width>
-      <Height>629</Height>
+      <Width>822</Width>
+      <Height>791</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.Visualizers.TableLayoutPanelVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <TableLayoutPanelVisualizer>
         <MashupSettings>
-          <Source>48</Source>
+          <Source>39</Source>
           <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
           <VisualizerSettings>
             <IplImageVisualizer />
@@ -2264,7 +2221,7 @@
           </VisualizerSettings>
         </MashupSettings>
         <MashupSettings>
-          <Source>47</Source>
+          <Source>38</Source>
           <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
           <VisualizerSettings>
             <ObjectTextVisualizer />
@@ -2331,6 +2288,27 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
+      <X>2654</X>
+      <Y>119</Y>
+    </Location>
+    <Size>
+      <Width>416</Width>
+      <Height>279</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <TimeSeriesVisualizer>
+        <Capacity>640</Capacity>
+        <Min>0.70000000000000007</Min>
+        <Max>0.81</Max>
+        <AutoScale>true</AutoScale>
+      </TimeSeriesVisualizer>
+    </VisualizerSettings>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
       <X>0</X>
       <Y>0</Y>
     </Location>
@@ -2385,54 +2363,6 @@
     <Size>
       <Width>336</Width>
       <Height>519</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
