@@ -25,12 +25,12 @@
 
 
 //Define the teensy pins to report back to Bonsai
-#define L_ST 10
+#define L_ST 3
 #define L_CATCH 5
 #define R_ALUM 8
 #define R_MUT 7
 #define R_NON 6
-#define R_OBJ 9
+#define R_OBJ 9A
 #define R_reset 4
 
 // Create interrupt pin
