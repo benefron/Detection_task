@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.7.0"
+<WorkflowBuilder Version="2.7.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
@@ -10769,23 +10769,19 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
         <Name>Camera</Name>
         <Workflow>
           <Nodes>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>fps</Name>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="Fps" />
-              </PropertyMappings>
-            </Expression>
             <Expression xsi:type="ExternalizedMapping">
+              <Property Name="CaptureProperties" />
               <Property Name="Index" />
-              <Property Name="Settings" />
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p2:FpsCameraCapture">
-                <p2:Index>0</p2:Index>
-                <p2:Fps>200</p2:Fps>
-                <p2:Settings>0</p2:Settings>
+              <Combinator xsi:type="cv:CameraCapture">
+                <cv:Index>0</cv:Index>
+                <cv:CaptureProperties>
+                  <cv:CapturePropertyAssignment>
+                    <cv:Property>Fps</cv:Property>
+                    <cv:Value>0</cv:Value>
+                  </cv:CapturePropertyAssignment>
+                </cv:CaptureProperties>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -10815,13 +10811,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
-            <Edge From="1" To="3" Label="Source1" />
-            <Edge From="2" To="3" Label="Source2" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
-            <Edge From="4" To="5" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
-            <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -10832,7 +10826,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           <mx:ActiveEdge>Rising</mx:ActiveEdge>
           <mx:SampleMode>ContinuousSamples</mx:SampleMode>
           <mx:BufferSize>1000</mx:BufferSize>
-          <mx:SamplesPerRead>-1</mx:SamplesPerRead>
+          <mx:SamplesPerChannel xsi:nil="true" />
           <mx:Channels>
             <mx:AnalogInputChannelConfiguration>
               <mx:ChannelName />
@@ -10864,7 +10858,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
           <mx:ActiveEdge>Rising</mx:ActiveEdge>
           <mx:SampleMode>ContinuousSamples</mx:SampleMode>
           <mx:BufferSize>1000</mx:BufferSize>
-          <mx:SamplesPerRead>-1</mx:SamplesPerRead>
+          <mx:SamplesPerChannel xsi:nil="true" />
           <mx:Channels>
             <mx:AnalogInputChannelConfiguration>
               <mx:ChannelName />

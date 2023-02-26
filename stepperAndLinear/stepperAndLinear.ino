@@ -30,8 +30,8 @@
 #define R_ALUM 8
 #define R_MUT 7
 #define R_NON 6
-#define R_OBJ 9A
-#define R_reset 4
+#define R_OBJ 9
+#define R_reset 22
 
 // Create interrupt pin
 const byte interruptPin = 12;
@@ -51,11 +51,11 @@ int randangle; // rand option between 2 stimulus.
 int randopt; // switch case for stimulus.
 // define the position of the objects on the wheel
 int al_1 = 0 * 33;
-int al_2 = 5 * 33;
+int al_2 = 3 * 33;
 int at_1 = 2 * 33;
 int at_2 = 4 * 33;  
 int no_1 = 1 * 33;
-int no_2 = 3 * 33;
+int no_2 = 5 * 33;
 
 
 
@@ -287,7 +287,7 @@ void loop() {
 		{
 			linnear.enable();
       temp_catch = whiskPos - catch_dis;
-			linnear.rotate(-temp_catch);
+			linnear.rotate(temp_catch);
      // catch_dis = - catch_dis;
 		//	whiskPos = -whiskPos;
 			linnear.disable();
@@ -304,9 +304,9 @@ void loop() {
 			linnear.rotate(-36000);
       
 			linnear.disable();
-      delay(20);
-			digitalWrite(R_reset,HIGH);
-			delay(20);
+     // delay(20);
+			//digitalWrite(R_reset,HIGH);
+			//delay(20);
 			
 		}
       
@@ -321,6 +321,9 @@ void advancemotor() {
   linnear.startBrake();
   linnear.rotate(180);
   Serial.println("stopped");
+  delay(20);
+	digitalWrite(R_reset,HIGH);
+	delay(20);
   
   
   
