@@ -14,6 +14,7 @@
 #define STEP_L 14
 #define DIR 0
 #define STEP 1
+#define STEP_ZERO 4
 
 //Defining the teensy pins for control using Bonsai
 #define ALUM 11
@@ -22,6 +23,7 @@
 #define LFWD 17
 #define LBCK 22
 #define CATCH_FWD 18
+
 
 
 //Define the teensy pins to report back to Bonsai
@@ -73,6 +75,7 @@ void setup() {
     pinMode(ALUM,INPUT_PULLDOWN);
     pinMode(ATT,INPUT_PULLDOWN);
     pinMode(NON,INPUT_PULLDOWN);
+    pinMode(STEP_ZERO,INPUT);
     
     pinMode(3,OUTPUT);
     randomSeed(analogRead(0));
@@ -80,6 +83,7 @@ void setup() {
    
    attachInterrupt(digitalPinToInterrupt(interruptPin), advancemotor, RISING);
    Serial.println("l - aluminum foil m - muted n - non");
+   //Serial.println(digitalRead(STEP_ZERO));
 //   
   linnear.enable();
    linnear.rotate(-36000);
@@ -185,8 +189,8 @@ void loop() {
           break;
           }
 
-          stepper.move(-stepperAngle);
-          delay(75);
+          //stepper.move(-stepperAngle);
+          //delay(75);
           stepper.move(myrand1*MICROSTEPS);
           delay(75);
           stepper.move(myrand2*MICROSTEPS);
@@ -216,8 +220,8 @@ void loop() {
           tempAngle = at_2;
           break;
           }
-          stepper.move(-stepperAngle);
-          delay(75);
+          //stepper.move(-stepperAngle);
+          //delay(75);
           stepper.move(myrand1*MICROSTEPS);
           delay(75);
           stepper.move(myrand2*MICROSTEPS);
@@ -249,8 +253,8 @@ void loop() {
           break;
           }
          
-          stepper.move(-stepperAngle);
-          delay(75);
+          //stepper.move(-stepperAngle);
+          //delay(75);
           stepper.move(myrand1*MICROSTEPS);
           delay(75);
           stepper.move(myrand2*MICROSTEPS);
@@ -321,11 +325,23 @@ void advancemotor() {
   linnear.startBrake();
   linnear.rotate(180);
   Serial.println("stopped");
+  
+  while (true)
+  {
+  if (digitalRead(STEP_ZERO) == LOW)
+  {
+    stepper.move(1*MICROSTEPS);
+    delay(10);
+  }
+  else
+  
+  {
+    break;
+  }
+  }
   delay(20);
 	digitalWrite(R_reset,HIGH);
 	delay(20);
-  
-  
-  
+ 
   
 }

@@ -47,7 +47,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.6</Value>
+                <Value>0.5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.15</Value>
+                <Value>0.3</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -287,7 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>F107_test</Value>
+                <Value>Ftest</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -338,7 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-                      <io:SearchPattern>F107_test_1</io:SearchPattern>
+                      <io:SearchPattern>Ftest</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -584,7 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Omer training\F107_test_1\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2729,7 +2729,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F107_test_1\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2759,7 +2759,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Omer training\F107_test_1\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2820,7 +2820,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F107_test_1\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -3030,7 +3030,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\F107_test_1\\Videos\28_5_2023_13_6\session_1\F107_test_1_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\29_5_2023_16_45\session_1\Ftest_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3305,7 +3305,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F107_test_1\\Analogs\28_5_2023_13_6\Sound\session_1\F107_test_1_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\29_5_2023_16_45\Sound\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3562,7 +3562,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F107_test_1\\Analogs\28_5_2023_13_6\Encoder\session_1\F107_test_1_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\29_5_2023_16_45\Encoder\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
