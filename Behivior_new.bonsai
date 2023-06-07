@@ -10372,7 +10372,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:BufferCount">
-                            <rx:Count>20</rx:Count>
+                            <rx:Count>10</rx:Count>
                             <rx:Skip>1</rx:Skip>
                           </Combinator>
                         </Expression>
@@ -10450,7 +10450,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:BufferCount">
-                            <rx:Count>20</rx:Count>
+                            <rx:Count>10</rx:Count>
                             <rx:Skip>1</rx:Skip>
                           </Combinator>
                         </Expression>
@@ -11062,7 +11062,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:BufferCount">
-                            <rx:Count>10</rx:Count>
+                            <rx:Count>20</rx:Count>
                             <rx:Skip>1</rx:Skip>
                           </Combinator>
                         </Expression>
@@ -11151,7 +11151,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:BufferCount">
-                            <rx:Count>10</rx:Count>
+                            <rx:Count>20</rx:Count>
                             <rx:Skip>1</rx:Skip>
                           </Combinator>
                         </Expression>
@@ -11240,7 +11240,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:BufferCount">
-                            <rx:Count>10</rx:Count>
+                            <rx:Count>20</rx:Count>
                             <rx:Skip>1</rx:Skip>
                           </Combinator>
                         </Expression>
