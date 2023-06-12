@@ -31,7 +31,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -47,7 +47,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.65</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0</Value>
+                <Value>0.15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -186,7 +186,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>2</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -194,7 +194,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.65</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -202,7 +202,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -210,7 +210,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0</Value>
+                <Value>0.15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -287,7 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ftest</Value>
+                <Value>F108</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -338,7 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-                      <io:SearchPattern>Ftest</io:SearchPattern>
+                      <io:SearchPattern>F108</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -584,7 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F108\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2235,7 +2235,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="Extensions\Output control with timing.bonsai">
                           <PortName>COM9</PortName>
-                          <DueTime>PT0.04S</DueTime>
+                          <DueTime>PT0.075S</DueTime>
                           <Value>13</Value>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -2789,7 +2789,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\Ftest\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F108\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2819,7 +2819,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Omer training\F108\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2880,7 +2880,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\Ftest\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F108\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -3090,7 +3090,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\7_6_2023_15_31\session_1\Ftest_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\F108\\Videos\12_6_2023_13_20\session_1\F108_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3365,7 +3365,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\7_6_2023_15_31\Sound\session_1\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F108\\Analogs\12_6_2023_13_20\Sound\session_1\F108_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3622,7 +3622,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\7_6_2023_15_31\Encoder\session_1\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F108\\Analogs\12_6_2023_13_20\Encoder\session_1\F108_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -4790,7 +4790,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
-                <Value>false</Value>
+                <Value>true</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4808,7 +4808,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.8</Value>
+                <Value>0.05</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4887,7 +4887,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
+                            <Value>true</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -4908,7 +4908,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.8</Value>
+                            <Value>0.05</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -5118,7 +5118,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p1:CreateBinomial">
-                            <p1:P>1</p1:P>
+                            <p1:P>0.65</p1:P>
                             <p1:N>1</p1:N>
                           </Combinator>
                         </Expression>
@@ -5350,7 +5350,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0</p1:P>
+                                  <p1:P>0.15</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -6485,7 +6485,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT2S</rx:DueTime>
+                            <rx:DueTime>PT10S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -6629,7 +6629,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
+                            <Value>true</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6650,7 +6650,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.8</Value>
+                            <Value>0.05</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6781,7 +6781,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>true</Value>
+                            <Value>false</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -10476,7 +10476,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:BufferCount">
-                      <rx:Count>5</rx:Count>
+                      <rx:Count>15</rx:Count>
                       <rx:Skip xsi:nil="true" />
                     </Combinator>
                   </Expression>
@@ -11721,7 +11721,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="DoubleProperty">
-                      <Value>0.005</Value>
+                      <Value>0.0075</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="rx:Accumulate" />
@@ -12062,18 +12062,21 @@ def process(value):
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
@@ -12089,6 +12092,7 @@ def process(value):
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
@@ -12133,6 +12137,7 @@ def process(value):
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
@@ -12142,6 +12147,7 @@ def process(value):
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
@@ -12151,6 +12157,7 @@ def process(value):
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
+  value = round(value,2)
   x = str(value)
   return x</ipy:Script>
             </Expression>
