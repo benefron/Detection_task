@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WorkflowBuilder Version="2.7.1"
+<WorkflowBuilder Version="2.7.3"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
@@ -47,7 +47,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.65</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>10</Value>
+                <Value>5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.15</Value>
+                <Value>0.45</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -287,7 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>F108</Value>
+                <Value>Ftest</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -338,7 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-                      <io:SearchPattern>F108</io:SearchPattern>
+                      <io:SearchPattern>Ftest</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -584,7 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Omer training\F108\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2789,7 +2789,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F108\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2819,7 +2819,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Omer training\F108\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2880,7 +2880,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F108\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -3090,7 +3090,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\F108\\Videos\12_6_2023_13_20\session_1\F108_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\22_6_2023_18_18\session_1\Ftest_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3365,7 +3365,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F108\\Analogs\12_6_2023_13_20\Sound\session_1\F108_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\22_6_2023_18_18\Sound\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3622,7 +3622,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F108\\Analogs\12_6_2023_13_20\Encoder\session_1\F108_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\22_6_2023_18_18\Encoder\session_1\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -5118,7 +5118,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p1:CreateBinomial">
-                            <p1:P>0.65</p1:P>
+                            <p1:P>1</p1:P>
                             <p1:N>1</p1:N>
                           </Combinator>
                         </Expression>
@@ -5350,7 +5350,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0.15</p1:P>
+                                  <p1:P>0.45</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -6485,7 +6485,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT10S</rx:DueTime>
+                            <rx:DueTime>PT5S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -10441,6 +10441,11 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Expression xsi:type="SubscribeSubject">
                     <Name>Graph</Name>
                   </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Skip">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
                   <Expression xsi:type="viz:RollingGraphBuilder">
                     <viz:IndexSelector />
                     <viz:ValueSelector>Item1,Item2,Item3</viz:ValueSelector>
@@ -10705,46 +10710,47 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="24" To="25" Label="Source1" />
                   <Edge From="25" To="27" Label="Source1" />
                   <Edge From="26" To="27" Label="Source2" />
-                  <Edge From="26" To="53" Label="Source2" />
-                  <Edge From="26" To="59" Label="Source2" />
+                  <Edge From="26" To="54" Label="Source2" />
+                  <Edge From="26" To="60" Label="Source2" />
                   <Edge From="27" To="33" Label="Source1" />
                   <Edge From="28" To="29" Label="Source1" />
                   <Edge From="29" To="30" Label="Source1" />
-                  <Edge From="30" To="46" Label="Source1" />
-                  <Edge From="31" To="44" Label="Source1" />
-                  <Edge From="32" To="60" Label="Source2" />
-                  <Edge From="32" To="54" Label="Source2" />
+                  <Edge From="30" To="47" Label="Source1" />
+                  <Edge From="31" To="45" Label="Source1" />
+                  <Edge From="32" To="61" Label="Source2" />
+                  <Edge From="32" To="55" Label="Source2" />
                   <Edge From="32" To="33" Label="Source2" />
                   <Edge From="32" To="35" Label="Source1" />
                   <Edge From="33" To="34" Label="Source1" />
-                  <Edge From="35" To="41" Label="Source2" />
-                  <Edge From="35" To="44" Label="Source2" />
+                  <Edge From="35" To="42" Label="Source2" />
+                  <Edge From="35" To="45" Label="Source2" />
                   <Edge From="36" To="37" Label="Source1" />
-                  <Edge From="37" To="39" Label="Source1" />
-                  <Edge From="38" To="39" Label="Source2" />
-                  <Edge From="39" To="42" Label="Source1" />
-                  <Edge From="40" To="41" Label="Source1" />
-                  <Edge From="41" To="42" Label="Source2" />
-                  <Edge From="42" To="43" Label="Source1" />
-                  <Edge From="44" To="47" Label="Source2" />
-                  <Edge From="45" To="46" Label="Source2" />
-                  <Edge From="46" To="47" Label="Source1" />
+                  <Edge From="37" To="38" Label="Source1" />
+                  <Edge From="38" To="40" Label="Source1" />
+                  <Edge From="39" To="40" Label="Source2" />
+                  <Edge From="40" To="43" Label="Source1" />
+                  <Edge From="41" To="42" Label="Source1" />
+                  <Edge From="42" To="43" Label="Source2" />
+                  <Edge From="43" To="44" Label="Source1" />
+                  <Edge From="45" To="48" Label="Source2" />
+                  <Edge From="46" To="47" Label="Source2" />
                   <Edge From="47" To="48" Label="Source1" />
                   <Edge From="48" To="49" Label="Source1" />
-                  <Edge From="50" To="51" Label="Source1" />
+                  <Edge From="49" To="50" Label="Source1" />
                   <Edge From="51" To="52" Label="Source1" />
                   <Edge From="52" To="53" Label="Source1" />
                   <Edge From="53" To="54" Label="Source1" />
                   <Edge From="54" To="55" Label="Source1" />
-                  <Edge From="56" To="57" Label="Source1" />
+                  <Edge From="55" To="56" Label="Source1" />
                   <Edge From="57" To="58" Label="Source1" />
                   <Edge From="58" To="59" Label="Source1" />
                   <Edge From="59" To="60" Label="Source1" />
                   <Edge From="60" To="61" Label="Source1" />
-                  <Edge From="62" To="65" Label="Source1" />
-                  <Edge From="63" To="65" Label="Source2" />
-                  <Edge From="64" To="65" Label="Source3" />
-                  <Edge From="65" To="66" Label="Source1" />
+                  <Edge From="61" To="62" Label="Source1" />
+                  <Edge From="63" To="66" Label="Source1" />
+                  <Edge From="64" To="66" Label="Source2" />
+                  <Edge From="65" To="66" Label="Source3" />
+                  <Edge From="66" To="67" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -11004,7 +11010,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>-3</Value>
+          <Value>3</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
