@@ -47,7 +47,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.65</Value>
+                <Value>0</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -194,7 +194,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>1</Value>
+                <Value>0.5</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -202,7 +202,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>10</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -210,7 +210,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.65</Value>
+                <Value>0</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -287,7 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>F108</Value>
+                <Value>Ftest</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -338,7 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-                      <io:SearchPattern>F112</io:SearchPattern>
+                      <io:SearchPattern>Ftest</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -584,7 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Omer training\F112\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2789,7 +2789,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F112\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2819,7 +2819,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Omer training\F112\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2880,7 +2880,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\F112\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\Ftest\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -3090,7 +3090,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\F112\\Videos\26_6_2023_11_39\session_3\F112_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\28_6_2023_10_36\session_2\Ftest_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3365,7 +3365,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F112\\Analogs\26_6_2023_11_39\Sound\session_3\F112_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\28_6_2023_10_36\Sound\session_2\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3622,7 +3622,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\F112\\Analogs\26_6_2023_11_39\Encoder\session_3\F112_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\28_6_2023_10_36\Encoder\session_2\Ftest_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -4790,7 +4790,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
-                <Value>false</Value>
+                <Value>true</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4808,7 +4808,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.05</Value>
+                <Value>0.4</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4887,7 +4887,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
+                            <Value>true</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -4908,7 +4908,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.05</Value>
+                            <Value>0.4</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -4955,7 +4955,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0</p1:P>
+                                  <p1:P>0.4</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -5118,7 +5118,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p1:CreateBinomial">
-                            <p1:P>1</p1:P>
+                            <p1:P>0.5</p1:P>
                             <p1:N>1</p1:N>
                           </Combinator>
                         </Expression>
@@ -5350,7 +5350,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0.65</p1:P>
+                                  <p1:P>0</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -6485,7 +6485,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT2S</rx:DueTime>
+                            <rx:DueTime>PT10S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -6629,7 +6629,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
+                            <Value>true</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6650,7 +6650,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.05</Value>
+                            <Value>0.4</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -11437,6 +11437,41 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Expression xsi:type="MulticastSubject">
                           <Name>AttFA running</Name>
                         </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Events</Name>
+                        </Expression>
+                        <Expression xsi:type="Equal">
+                          <Operand xsi:type="StringProperty">
+                            <Value>066 - Motor fwd</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="rx:Condition">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:ElementIndex" />
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Index</Selector>
+                        </Expression>
+                        <Expression xsi:type="Add">
+                          <Operand xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="MulticastSubject">
+                          <Name>allT</Name>
+                        </Expression>
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
@@ -11508,6 +11543,12 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         <Edge From="68" To="69" Label="Source1" />
                         <Edge From="69" To="70" Label="Source1" />
                         <Edge From="70" To="71" Label="Source1" />
+                        <Edge From="72" To="73" Label="Source1" />
+                        <Edge From="73" To="74" Label="Source1" />
+                        <Edge From="74" To="75" Label="Source1" />
+                        <Edge From="75" To="76" Label="Source1" />
+                        <Edge From="76" To="77" Label="Source1" />
+                        <Edge From="77" To="78" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -11667,6 +11708,14 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>allNon</Name>
                   </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="DoubleProperty">
+                      <Value>0</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>allT</Name>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -11688,6 +11737,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="0" To="35" Label="Source1" />
                   <Edge From="0" To="37" Label="Source1" />
                   <Edge From="0" To="39" Label="Source1" />
+                  <Edge From="0" To="41" Label="Source1" />
                   <Edge From="1" To="3" Label="Source1" />
                   <Edge From="2" To="3" Label="Source2" />
                   <Edge From="3" To="4" Label="Source1" />
@@ -11709,6 +11759,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                   <Edge From="35" To="36" Label="Source1" />
                   <Edge From="37" To="38" Label="Source1" />
                   <Edge From="39" To="40" Label="Source1" />
+                  <Edge From="41" To="42" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -12055,34 +12106,30 @@ def process(value):
             <Expression xsi:type="SubscribeSubject">
               <Name>allGo</Name>
             </Expression>
+            <Expression xsi:type="ipy:PythonTransform">
+              <ipy:Script>@returns(str)
+def process(value):
+  value = int(value)
+  x = str(value)
+  return x</ipy:Script>
+            </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>allAt</Name>
+            </Expression>
+            <Expression xsi:type="ipy:PythonTransform">
+              <ipy:Script>@returns(str)
+def process(value):
+  value = int(value)
+  x = str(value)
+  return x</ipy:Script>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>allNon</Name>
             </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:CombineLatest" />
-            </Expression>
-            <Expression xsi:type="Add" />
             <Expression xsi:type="ipy:PythonTransform">
               <ipy:Script>@returns(str)
 def process(value):
-  value = round(value,2)
-  x = str(value)
-  return x</ipy:Script>
-            </Expression>
-            <Expression xsi:type="ipy:PythonTransform">
-              <ipy:Script>@returns(str)
-def process(value):
-  value = round(value,2)
-  x = str(value)
-  return x</ipy:Script>
-            </Expression>
-            <Expression xsi:type="ipy:PythonTransform">
-              <ipy:Script>@returns(str)
-def process(value):
-  value = round(value,2)
+  value = int(value)
   x = str(value)
   return x</ipy:Script>
             </Expression>
@@ -12090,17 +12137,6 @@ def process(value):
               <Combinator xsi:type="StringProperty">
                 <Value>Total Trials: </Value>
               </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:CombineLatest" />
-            </Expression>
-            <Expression xsi:type="Add" />
-            <Expression xsi:type="ipy:PythonTransform">
-              <ipy:Script>@returns(str)
-def process(value):
-  value = round(value,2)
-  x = str(value)
-  return x</ipy:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
@@ -12132,6 +12168,20 @@ def process(value):
             <Expression xsi:type="SubscribeSubject">
               <Name>total controls</Name>
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>allT</Name>
+            </Expression>
+            <Expression xsi:type="ipy:PythonTransform">
+              <ipy:Script>@returns(str)
+def process(value):
+  value = int(value)
+  x = str(value)
+  return x</ipy:Script>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:CombineLatest" />
+            </Expression>
+            <Expression xsi:type="Add" />
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:CombineLatest" />
             </Expression>
@@ -12203,55 +12253,57 @@ def process(value):
             </Expression>
           </Nodes>
           <Edges>
-            <Edge From="0" To="3" Label="Source3" />
-            <Edge From="0" To="11" Label="Source1" />
-            <Edge From="1" To="3" Label="Source2" />
-            <Edge From="1" To="6" Label="Source1" />
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="8" Label="Source2" />
             <Edge From="2" To="3" Label="Source1" />
-            <Edge From="2" To="7" Label="Source1" />
-            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="3" To="14" Label="Source2" />
             <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="9" Label="Source2" />
-            <Edge From="6" To="19" Label="Source2" />
-            <Edge From="7" To="16" Label="Source2" />
+            <Edge From="5" To="11" Label="Source2" />
+            <Edge From="6" To="19" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
             <Edge From="8" To="9" Label="Source1" />
-            <Edge From="9" To="10" Label="Source1" />
-            <Edge From="10" To="22" Label="Source1" />
-            <Edge From="11" To="13" Label="Source2" />
-            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="9" To="21" Label="Source2" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="21" Label="Source3" />
             <Edge From="13" To="14" Label="Source1" />
-            <Edge From="14" To="22" Label="Source2" />
-            <Edge From="15" To="16" Label="Source1" />
-            <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="22" Label="Source3" />
-            <Edge From="18" To="19" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="21" Label="Source4" />
+            <Edge From="16" To="21" Label="Source5" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="19" Label="Source2" />
             <Edge From="19" To="20" Label="Source1" />
-            <Edge From="20" To="22" Label="Source4" />
-            <Edge From="21" To="22" Label="Source5" />
+            <Edge From="20" To="21" Label="Source1" />
+            <Edge From="21" To="22" Label="Source1" />
             <Edge From="22" To="23" Label="Source1" />
-            <Edge From="23" To="24" Label="Source1" />
-            <Edge From="25" To="26" Label="Source1" />
-            <Edge From="26" To="32" Label="Source2" />
-            <Edge From="27" To="28" Label="Source1" />
-            <Edge From="28" To="35" Label="Source2" />
-            <Edge From="29" To="30" Label="Source1" />
-            <Edge From="30" To="38" Label="Source2" />
+            <Edge From="24" To="25" Label="Source1" />
+            <Edge From="25" To="31" Label="Source2" />
+            <Edge From="26" To="27" Label="Source1" />
+            <Edge From="27" To="34" Label="Source2" />
+            <Edge From="28" To="29" Label="Source1" />
+            <Edge From="29" To="37" Label="Source2" />
+            <Edge From="30" To="31" Label="Source1" />
             <Edge From="31" To="32" Label="Source1" />
-            <Edge From="32" To="33" Label="Source1" />
-            <Edge From="33" To="40" Label="Source1" />
+            <Edge From="32" To="39" Label="Source1" />
+            <Edge From="33" To="34" Label="Source1" />
             <Edge From="34" To="35" Label="Source1" />
-            <Edge From="35" To="36" Label="Source1" />
-            <Edge From="36" To="40" Label="Source2" />
+            <Edge From="35" To="39" Label="Source2" />
+            <Edge From="36" To="37" Label="Source1" />
             <Edge From="37" To="38" Label="Source1" />
-            <Edge From="38" To="39" Label="Source1" />
-            <Edge From="39" To="40" Label="Source3" />
+            <Edge From="38" To="39" Label="Source3" />
+            <Edge From="39" To="40" Label="Source1" />
             <Edge From="40" To="41" Label="Source1" />
-            <Edge From="41" To="42" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="rx:BehaviorSubject">
+        <Name>totalTs</Name>
+      </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>Rates</Name>
+      </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>totalTs</Name>
       </Expression>
     </Nodes>
     <Edges>
@@ -12280,6 +12332,7 @@ def process(value):
       <Edge From="46" To="48" Label="Source2" />
       <Edge From="47" To="48" Label="Source3" />
       <Edge From="48" To="49" Label="Source1" />
+      <Edge From="54" To="55" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
