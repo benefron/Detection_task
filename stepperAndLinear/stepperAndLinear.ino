@@ -56,7 +56,7 @@ int al_1 = 0 * 33;
 int al_2 = 4 * 33;
 int at_1 = 1 * 33;
 int at_2 = 2 * 33;  
-int no_1 = 3 * 33;
+int no_1 = 1 * 33;
 int no_2 = 5 * 33;
 
 

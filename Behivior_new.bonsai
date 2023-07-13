@@ -31,7 +31,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="IntProperty">
-                <Value>1</Value>
+                <Value>2</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -63,7 +63,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>10</Value>
+                <Value>11</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Multiply">
@@ -84,7 +84,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0</Value>
+                <Value>0.15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -100,7 +100,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -210,7 +210,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0</Value>
+                <Value>0.15</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -218,7 +218,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="MulticastSubject">
@@ -287,7 +287,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ftest</Value>
+                <Value>F113test</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
@@ -338,7 +338,7 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="io:EnumerateDirectories">
                       <io:Path>E:\Ben\Omer training</io:Path>
-                      <io:SearchPattern>Ftest</io:SearchPattern>
+                      <io:SearchPattern>F113test</io:SearchPattern>
                       <io:SearchOption>TopDirectoryOnly</io:SearchOption>
                     </Combinator>
                   </Expression>
@@ -584,7 +584,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvReader">
-                    <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F113test\Settings.csv</io:FileName>
                     <io:ListSeparator>,</io:ListSeparator>
                     <io:ScanPattern />
                     <io:SkipRows>0</io:SkipRows>
@@ -2235,7 +2235,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="Extensions\Output control with timing.bonsai">
                           <PortName>COM9</PortName>
-                          <DueTime>PT0.1S</DueTime>
+                          <DueTime>PT0.085S</DueTime>
                           <Value>13</Value>
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
@@ -2280,7 +2280,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>1.2</Value>
+                            <Value>0.2</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="Multiply">
@@ -2313,6 +2313,18 @@ def process(value):
                           <Combinator xsi:type="rx:Skip">
                             <rx:Count>1</rx:Count>
                           </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause A B C P Q R S Alt</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Merge" />
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="num:CreateRandom">
@@ -2350,11 +2362,87 @@ def process(value):
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:FrequencyFilter">
+                            <dsp:SampleRate>125000</dsp:SampleRate>
+                            <dsp:Cutoff1>1500</dsp:Cutoff1>
+                            <dsp:Cutoff2>0</dsp:Cutoff2>
+                            <dsp:KernelLength>60</dsp:KernelLength>
+                            <dsp:FilterType>LowPass</dsp:FilterType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Rescale">
+                            <dsp:Min>-0.5</dsp:Min>
+                            <dsp:Max>0.5</dsp:Max>
+                            <dsp:RangeMin>-0.1</dsp:RangeMin>
+                            <dsp:RangeMax>0.1</dsp:RangeMax>
+                            <dsp:RescaleType>Linear</dsp:RescaleType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:FrequencyFilter">
+                            <dsp:SampleRate>125000</dsp:SampleRate>
+                            <dsp:Cutoff1>75000</dsp:Cutoff1>
+                            <dsp:Cutoff2>0</dsp:Cutoff2>
+                            <dsp:KernelLength>60</dsp:KernelLength>
+                            <dsp:FilterType>LowPass</dsp:FilterType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Rescale">
+                            <dsp:Min>-0.5</dsp:Min>
+                            <dsp:Max>0.5</dsp:Max>
+                            <dsp:RangeMin>-8</dsp:RangeMin>
+                            <dsp:RangeMax>8</dsp:RangeMax>
+                            <dsp:RescaleType>Linear</dsp:RescaleType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:FrequencyFilter">
+                            <dsp:SampleRate>125000</dsp:SampleRate>
+                            <dsp:Cutoff1>50000</dsp:Cutoff1>
+                            <dsp:Cutoff2>75000</dsp:Cutoff2>
+                            <dsp:KernelLength>60</dsp:KernelLength>
+                            <dsp:FilterType>BandPass</dsp:FilterType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Rescale">
+                            <dsp:Min>-0.5</dsp:Min>
+                            <dsp:Max>0.5</dsp:Max>
+                            <dsp:RangeMin>-4</dsp:RangeMin>
+                            <dsp:RangeMax>4</dsp:RangeMax>
+                            <dsp:RescaleType>Linear</dsp:RescaleType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:FrequencyFilter">
+                            <dsp:SampleRate>125000</dsp:SampleRate>
+                            <dsp:Cutoff1>15000</dsp:Cutoff1>
+                            <dsp:Cutoff2>50000</dsp:Cutoff2>
+                            <dsp:KernelLength>60</dsp:KernelLength>
+                            <dsp:FilterType>BandPass</dsp:FilterType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="dsp:Rescale">
+                            <dsp:Min>-0.5</dsp:Min>
+                            <dsp:Max>0.5</dsp:Max>
+                            <dsp:RangeMin>-3</dsp:RangeMin>
+                            <dsp:RangeMax>3</dsp:RangeMax>
+                            <dsp:RescaleType>Linear</dsp:RescaleType>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Zip" />
+                        </Expression>
+                        <Expression xsi:type="Add" />
+                        <Expression xsi:type="Combinator">
                           <Combinator xsi:type="dsp:Rescale">
                             <dsp:Min>-1</dsp:Min>
                             <dsp:Max>1</dsp:Max>
-                            <dsp:RangeMin>-1.2</dsp:RangeMin>
-                            <dsp:RangeMax>1.2</dsp:RangeMax>
+                            <dsp:RangeMin>-0.2</dsp:RangeMin>
+                            <dsp:RangeMax>0.2</dsp:RangeMax>
                             <dsp:RescaleType>Linear</dsp:RescaleType>
                           </Combinator>
                         </Expression>
@@ -2377,6 +2465,18 @@ def process(value):
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="wie:KeyDown">
+                            <wie:Filter>RButton B Alt</wie:Filter>
+                            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Merge" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:TakeUntil" />
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -2389,20 +2489,39 @@ def process(value):
                         <Edge From="2" To="3" Label="Source1" />
                         <Edge From="2" To="5" Label="Source1" />
                         <Edge From="3" To="4" Label="Source1" />
-                        <Edge From="4" To="15" Label="Source2" />
-                        <Edge From="5" To="15" Label="Source3" />
+                        <Edge From="4" To="28" Label="Source2" />
+                        <Edge From="5" To="28" Label="Source3" />
                         <Edge From="6" To="7" Label="Source1" />
-                        <Edge From="7" To="17" Label="Source2" />
+                        <Edge From="7" To="32" Label="Source1" />
                         <Edge From="8" To="9" Label="Source1" />
-                        <Edge From="9" To="10" Label="Source1" />
+                        <Edge From="9" To="12" Label="Source1" />
                         <Edge From="10" To="11" Label="Source1" />
-                        <Edge From="11" To="12" Label="Source1" />
+                        <Edge From="11" To="12" Label="Source2" />
                         <Edge From="12" To="13" Label="Source1" />
                         <Edge From="13" To="14" Label="Source1" />
                         <Edge From="14" To="15" Label="Source1" />
                         <Edge From="15" To="16" Label="Source1" />
                         <Edge From="16" To="17" Label="Source1" />
                         <Edge From="17" To="18" Label="Source1" />
+                        <Edge From="17" To="20" Label="Source1" />
+                        <Edge From="17" To="22" Label="Source1" />
+                        <Edge From="17" To="24" Label="Source1" />
+                        <Edge From="18" To="19" Label="Source1" />
+                        <Edge From="19" To="26" Label="Source1" />
+                        <Edge From="20" To="21" Label="Source1" />
+                        <Edge From="21" To="26" Label="Source4" />
+                        <Edge From="22" To="23" Label="Source1" />
+                        <Edge From="23" To="26" Label="Source3" />
+                        <Edge From="24" To="25" Label="Source1" />
+                        <Edge From="25" To="26" Label="Source2" />
+                        <Edge From="26" To="27" Label="Source1" />
+                        <Edge From="27" To="28" Label="Source1" />
+                        <Edge From="28" To="29" Label="Source1" />
+                        <Edge From="29" To="33" Label="Source1" />
+                        <Edge From="30" To="31" Label="Source1" />
+                        <Edge From="31" To="32" Label="Source2" />
+                        <Edge From="32" To="33" Label="Source2" />
+                        <Edge From="33" To="34" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -2789,7 +2908,7 @@ def process(value):
                     <Name>lastSettings</Name>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\Ftest\events.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F113test\events.csv</io:FileName>
                     <io:Delimiter>,</io:Delimiter>
                     <io:ListSeparator />
                     <io:Append>true</io:Append>
@@ -2819,7 +2938,7 @@ def process(value):
                           </PropertyMappings>
                         </Expression>
                         <Expression xsi:type="io:CsvWriter">
-                          <io:FileName>E:\Ben\Omer training\Ftest\Settings.csv</io:FileName>
+                          <io:FileName>E:\Ben\Omer training\F113test\Settings.csv</io:FileName>
                           <io:Delimiter>,</io:Delimiter>
                           <io:ListSeparator />
                           <io:Append>false</io:Append>
@@ -2880,7 +2999,7 @@ def process(value):
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="io:CsvWriter">
-                    <io:FileName>E:\Ben\Omer training\Ftest\licks.csv</io:FileName>
+                    <io:FileName>E:\Ben\Omer training\F113test\licks.csv</io:FileName>
                     <io:Append>true</io:Append>
                     <io:Overwrite>false</io:Overwrite>
                     <io:Suffix>None</io:Suffix>
@@ -3090,7 +3209,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="cv:VideoWriter">
-                                  <cv:FileName>E:\Ben\Omer training\Ftest\\Videos\28_6_2023_10_36\session_2\Ftest_.avi</cv:FileName>
+                                  <cv:FileName>E:\Ben\Omer training\F113test\\Videos\13_7_2023_12_55\session_1\F113test_.avi</cv:FileName>
                                   <cv:Suffix>FileCount</cv:Suffix>
                                   <cv:Buffered>true</cv:Buffered>
                                   <cv:Overwrite>false</cv:Overwrite>
@@ -3365,7 +3484,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\28_6_2023_10_36\Sound\session_2\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F113test\\Analogs\13_7_2023_12_55\Sound\session_1\F113test_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>ColumnMajor</dsp:Layout>
@@ -3622,7 +3741,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="dsp:MatrixWriter">
-                                  <dsp:Path>E:\Ben\Omer training\Ftest\\Analogs\28_6_2023_10_36\Encoder\session_2\Ftest_.bin</dsp:Path>
+                                  <dsp:Path>E:\Ben\Omer training\F113test\\Analogs\13_7_2023_12_55\Encoder\session_1\F113test_.bin</dsp:Path>
                                   <dsp:Suffix>FileCount</dsp:Suffix>
                                   <dsp:Overwrite>false</dsp:Overwrite>
                                   <dsp:Layout>RowMajor</dsp:Layout>
@@ -4790,7 +4909,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="BooleanProperty">
-                <Value>true</Value>
+                <Value>false</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4808,7 +4927,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="DoubleProperty">
-                <Value>0.4</Value>
+                <Value>0.25</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -4887,7 +5006,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>true</Value>
+                            <Value>false</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -4908,7 +5027,7 @@ def process(value):
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.4</Value>
+                            <Value>0.25</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -4955,7 +5074,7 @@ def process(value):
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0.4</p1:P>
+                                  <p1:P>0</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -5350,7 +5469,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0</p1:P>
+                                  <p1:P>0.15</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -5441,7 +5560,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Delay">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="WorkflowOutput" />
@@ -5566,7 +5685,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -5611,7 +5730,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:SampleInterval">
-                                        <rx:Interval>PT3.5S</rx:Interval>
+                                        <rx:Interval>PT1.5S</rx:Interval>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="WorkflowOutput" />
@@ -6028,7 +6147,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -6629,7 +6748,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>true</Value>
+                            <Value>false</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6650,7 +6769,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.4</Value>
+                            <Value>0.25</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6781,7 +6900,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
+                            <Value>true</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6802,7 +6921,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="DoubleProperty">
-                            <Value>0.9</Value>
+                            <Value>0.3</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="rx:Condition">
@@ -6849,7 +6968,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="p1:CreateBinomial">
-                                  <p1:P>0.9</p1:P>
+                                  <p1:P>0.3</p1:P>
                                   <p1:N>1</p1:N>
                                 </Combinator>
                               </Expression>
@@ -6974,7 +7093,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                             <p1:ProbabilityMass>
                               <p1:double>0.5</p1:double>
                               <p1:double>1</p1:double>
-                              <p1:double>0.75</p1:double>
+                              <p1:double>0.5</p1:double>
                             </p1:ProbabilityMass>
                           </Combinator>
                         </Expression>
@@ -7219,7 +7338,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -7264,7 +7383,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:SampleInterval">
-                                        <rx:Interval>PT3.5S</rx:Interval>
+                                        <rx:Interval>PT1.5S</rx:Interval>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="WorkflowOutput" />
@@ -7622,7 +7741,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -8145,7 +8264,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -8475,7 +8594,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                             <p1:ProbabilityMass>
                               <p1:double>0.5</p1:double>
                               <p1:double>1</p1:double>
-                              <p1:double>0.75</p1:double>
+                              <p1:double>0.5</p1:double>
                             </p1:ProbabilityMass>
                           </Combinator>
                         </Expression>
@@ -8720,7 +8839,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -8765,7 +8884,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:SampleInterval">
-                                        <rx:Interval>PT3.5S</rx:Interval>
+                                        <rx:Interval>PT1.5S</rx:Interval>
                                       </Combinator>
                                     </Expression>
                                     <Expression xsi:type="WorkflowOutput" />
@@ -9123,7 +9242,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -9646,7 +9765,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                                     </Expression>
                                     <Expression xsi:type="Combinator">
                                       <Combinator xsi:type="rx:Timer">
-                                        <rx:DueTime>PT3S</rx:DueTime>
+                                        <rx:DueTime>PT1S</rx:DueTime>
                                         <rx:Period>PT0S</rx:Period>
                                       </Combinator>
                                     </Expression>
@@ -9953,7 +10072,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT2S</rx:DueTime>
+                            <rx:DueTime>PT11S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -11080,7 +11199,7 @@ Gradually by changing the peobability you can make the behavior instrumental (gi
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="mx:AnalogInput">
           <mx:SignalSource />
-          <mx:SampleRate>100000</mx:SampleRate>
+          <mx:SampleRate>250000</mx:SampleRate>
           <mx:ActiveEdge>Rising</mx:ActiveEdge>
           <mx:SampleMode>ContinuousSamples</mx:SampleMode>
           <mx:BufferSize>1000</mx:BufferSize>
