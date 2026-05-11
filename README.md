@@ -158,10 +158,10 @@ Detection_task/
 
 | Layer | Technology |
 |-------|------------|
-| Behavior control | [Bonsai](https://bonsai-rx.org/) 2.8.1 — reactive programming for real-time systems |
+| Behavior control | [Bonsai](https://bonsai-rx.org/) 2.8.1 tested runtime — reactive programming for real-time systems |
 | Microcontrollers | [Teensy 4.0](https://www.pjrc.com/teensy/) × 2 — Firmata bridge + motor controller |
 | Motor firmware | C++ / Teensyduino, BasicStepperDriver library |
-| Bonsai extensions | C# (.NET Framework 4.7.2) |
+| Bonsai extensions | C# (.NET Framework 4.7.2); targets earlier Bonsai packages (for example, `Bonsai.Core` 2.7.0 and `Bonsai.Vision` 2.6.0) |
 | MATLAB analysis | MATLAB Live Scripts (.mlx) |
 | Python analysis | Python 3, PyQt5, pyqtgraph |
 | Ultrasonic audio | Avisoft USGH |
