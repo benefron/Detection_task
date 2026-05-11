@@ -15,8 +15,9 @@
 | **White Noise** | Duration of white noise playback during no-object and catch trials. |
 
 > **Loading a new animal:** Enter the animal ID and press **F10**.
+> On first load for a brand-new animal, the workflow should create the animal folder and default `Settings.csv` automatically.
 > To switch animals: stop Bonsai, change the ID, restart, and press **F10** again.
-> **Known issue / workaround for a brand-new animal:** Before the first load attempt, save any settings/data and close other Bonsai sessions. The first load may fail for a new animal; if it does, restart Bonsai and load the same animal ID again. The new animal folder should then be created on the second attempt.
+> If a new animal does not load correctly, verify that Bonsai has permission to create files in the data location and that no other Bonsai session is using the same animal folder.
 
 ---
 
