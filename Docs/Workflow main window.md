@@ -16,7 +16,7 @@
 
 > **Loading a new animal:** Enter the animal ID and press **F10**.
 > To switch animals: stop Bonsai, change the ID, restart, and press **F10** again.
-> For a brand-new animal: the first load attempt will return an error and crash — this is expected. Rerun Bonsai and reload; the new animal folder will be created correctly on the second attempt.
+> **Known issue / workaround for a brand-new animal:** Before the first load attempt, save any settings/data and close other Bonsai sessions. The first load may fail for a new animal; if it does, restart Bonsai and load the same animal ID again. The new animal folder should then be created on the second attempt.
 
 ---
 
