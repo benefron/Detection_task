@@ -1,5 +1,20 @@
 # Protocol for Running a Training Session
 
+## Local Configuration (first-time setup on a new machine)
+
+Before running sessions on a new PC or rig, update the machine-specific settings inside the Bonsai workflow:
+
+1. Open `Behivior_new.bonsai` in Bonsai.
+2. In the **main window**, update the **Path** parameter to the local data directory where animal folders will be saved (default in the workflow: `E:\Ben\Omer training`).
+3. If the Teensy boards are assigned different COM ports on this PC, update them inside the workflow:
+   - **Teensy #1 (Firmata bridge)** — default `COM9`; appears in the Arduino/Firmata serial nodes.
+   - **Teensy #2 (Motor controller)** — default `COM15`; appears in the serial-port nodes that send motor commands.
+4. Save the workflow after updating these values.
+
+> **Tip:** You can check which COM port each Teensy is assigned to by opening Device Manager (Windows) and expanding *Ports (COM & LPT)* while the boards are connected.
+
+---
+
 ## Setup
 
 1. Open `Behivior_new.bonsai` in Bonsai.

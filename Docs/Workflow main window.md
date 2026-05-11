@@ -25,8 +25,7 @@
 
 | Key | Action |
 |-----|--------|
-| **F1** | Apply updated parameters |
-| **F2** | Start session |
+| **F2** | Apply updated parameters (change settings) |
 | **F4** | Send serial command to motor Teensy |
 | **F10** | Load animal by ID |
 | **F12** | Start / restart training session |

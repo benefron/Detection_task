@@ -82,6 +82,20 @@ By comparing hit rates and false alarm rates across stimulus conditions, the tas
 
 ---
 
+## Local Configuration
+
+Before running the system on a new PC, two machine-specific settings in `Behivior_new.bonsai` must be updated:
+
+| Setting | Location in workflow | Default value | What to set |
+|---------|----------------------|---------------|-------------|
+| **Data path** | `Path` parameter in the main window | `E:\Ben\Omer training` | Local directory where animal folders will be saved |
+| **Teensy #1 COM port** (Firmata bridge) | Arduino/Firmata serial nodes | `COM9` | COM port assigned to the Firmata Teensy on this PC |
+| **Teensy #2 COM port** (Motor controller) | Serial-port nodes for motor commands | `COM15` | COM port assigned to the motor Teensy on this PC |
+
+To find the correct COM ports, open **Device Manager → Ports (COM & LPT)** while the Teensy boards are connected. Update the values in the workflow and save before starting acquisition.
+
+---
+
 ## Task Design
 
 ### Training Levels
