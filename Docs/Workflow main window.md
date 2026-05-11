@@ -1,25 +1,49 @@
-Workflow main window
+# Bonsai Workflow — Main Window Reference
 
-Parameters at main window:
-    - Animal ID: The unique ID given to the animal to be able to save the data and load the configurations
-    - BufferCount: Determines the buffer (in sec) for the histogram window of licks. The buffer needs to be set based on the configuration, prior to starting the Bonsai software.
-    - Catch Trial: True - trials with the motor reaching short of the whiksers. False - all trials the motor reach the whiskers
-    - Catch trial %: detrmines the fraction of trials that will have "Catch" distance, defult is 0.1
-    - Count Aluminum: The running average window for the aluminum hit rate graph
-    - Count Non: The running average window for the non FA rate graph
-    - load Animal: just a reminder that to load an animal to run the training you need to press F10. 
-        * To change animals you need to stop the Bonsai, change the name, restart and load the animal. 
-        * To start a new animal that was never trained before, you need to try once and load it, this will return an error and crash the software, rerun it and reload the animal and it will work fine.
+## Parameters
 
-    - Serial command: This allows you to send commands to the teensy controling the motors, this can be a text or a number. To send the command you press F4. This can receive the following:
-        * l - rotate to aluminum position
-        * m - rotate to the attenuated position
-        * n - rotate to the no object position
-        * int - moves the linear motor by the number in mm, can also recieve negative to move backwards
-        * r+int - rotates the object motor by the degrees given
-        & c + int - determines the catch trial position relative to the save whisker position. Default: 10mm
-    - start session: the key you need to press to start teh session F2
-    - Water per drop: The calibrated amount of water 
-    - Water reward: the time the selonid valve is open (determines the amount of water)
-    - White
-        
+| Parameter | Description |
+|-----------|-------------|
+| **Animal ID** | Unique identifier for the animal. Used to save data and load the animal's previous configuration. |
+| **BufferCount** | Sets the time window (in seconds) for the lick histogram display. Must be set before starting Bonsai, based on the expected trial duration. |
+| **Catch Trial** | `True` — some trials deliver the object short of whisker contact. `False` — all trials deliver the object to full whisker-contact distance. |
+| **Catch Trial %** | Fraction of trials designated as catch trials (short-distance). Default: `0.1` (10%). |
+| **Count Aluminum** | Window size (number of trials) for the running average of the aluminum foil hit rate graph. |
+| **Count Non** | Window size (number of trials) for the running average of the no-object false alarm rate graph. |
+| **Water Per Drop** | The calibrated water volume (µL) delivered per reward event. |
+| **Water Reward** | Duration the solenoid valve stays open per reward (determines water volume delivered). |
+| **White Noise** | Duration of white noise playback during no-object and catch trials. |
+
+> **Loading a new animal:** Enter the animal ID and press **F10**.
+> To switch animals: stop Bonsai, change the ID, restart, and press **F10** again.
+> For a brand-new animal: the first load attempt will return an error and crash — this is expected. Rerun Bonsai and reload; the new animal folder will be created correctly on the second attempt.
+
+---
+
+## Key Bindings
+
+| Key | Action |
+|-----|--------|
+| **F1** | Apply updated parameters |
+| **F2** | Start session |
+| **F4** | Send serial command to motor Teensy |
+| **F10** | Load animal by ID |
+| **F12** | Start / restart training session |
+| **Shift+A** | Rotate object holder to aluminum foil position |
+| **Shift+F** | Send linear motor to home (starting) position |
+| **Shift+W** | Manually trigger water reward |
+
+---
+
+## Serial Commands (Motor Control)
+
+Enter a command in the **Serial Command** field and press **F4** to send it to the motor Teensy.
+
+| Command | Action |
+|---------|--------|
+| `l` | Rotate to aluminum foil position |
+| `m` | Rotate to attenuated object position |
+| `n` | Rotate to no-object position |
+| `<int>` | Move linear motor by N mm (negative value = backward) |
+| `r<int>` | Rotate stepper motor by N degrees |
+| `c<int>` | Set catch trial distance: how many mm short of the whisker-contact position the motor stops. Default: `10` |
