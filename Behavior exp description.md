@@ -25,7 +25,7 @@ Controls all behavioral parameters for the session:
 | `Reward Time` | Duration the solenoid valve stays open; calibrated to µL. |
 | `P2I` | Fraction of trials where reward is delivered regardless of whether the mouse licked (instructed trials). |
 
-Default settings are loaded for each new animal. After changing parameters, press **F1** to apply them and **F12** to restart the session.
+Default settings are loaded for each new animal. After changing parameters, press **F12** to restart the session with the updated settings.
 
 **Training levels:**
 
