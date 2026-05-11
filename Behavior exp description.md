@@ -31,8 +31,8 @@ Default settings are loaded for each new animal. After changing parameters, pres
 
 | Level | Behavior |
 |-------|----------|
-| 0 | Lick training — reward is delivered for any lick; `difficulty` controls whether reward is always given or only contingent on licking |
-| 1 | Go/No-Go — `difficulty` controls the proportion of go/no-go trials; `P2I` controls the proportion of instructed vs. learned trials |
+| 0 | Lick training — reward is delivered for any lick; `Difficulty` controls whether reward is always given or only contingent on licking |
+| 1 | Go/No-Go — `Difficulty` controls the proportion of go/no-go trials; `P2I` controls the proportion of instructed vs. learned trials |
 | 2 | Object detection — aluminum foil (go) vs. attenuated/silent object (no-go) |
 | 3 | Test — full detection task with attenuated objects |
 
