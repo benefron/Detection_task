@@ -120,7 +120,7 @@ To find the correct COM ports, open **Device Manager → Ports (COM & LPT)** whi
 | Parameter | Description |
 |-----------|-------------|
 | `Difficulty` | Binomial probability of rewarded stimulus presentation (0.5 = fully random) |
-| `P2I` | Fraction of trials where reward is given regardless of licking (instructed trials) |
+| `PTI` | Fraction of trials where reward is given regardless of licking (instructed trials; previously documented as `P2I`) |
 | `Catch trial %` | Fraction of trials where motor stops short of whisker contact (default: 10%) |
 | `Reward time` | Solenoid open duration, calibrated to µL |
 | `Time out` | Penalty interval after an incorrect response (seconds) |
