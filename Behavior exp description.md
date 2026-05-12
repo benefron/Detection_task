@@ -63,7 +63,7 @@ Two **Teensy 4.0** microcontrollers form the hardware control layer:
 **Manual calibration** (used during setup before each session):
 - Move the linear motor forward/backward to determine the correct whisker-contact distance
 - Rotate the object holder to each object position and verify contact quality
-- Set the safe whisker-contact distance and the catch trial offset (default: 10 mm short)
+- Set the safe whisker-contact distance and the catch trial offset (default: 18 mm short)
 
 **Automated trial mode** (during experiments):
 1. Rotate the stepper motor randomly clockwise and counterclockwise before settling on the target object — this prevents the mouse from predicting the stimulus identity from motor sounds

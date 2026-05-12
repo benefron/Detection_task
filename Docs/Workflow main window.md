@@ -45,5 +45,5 @@ Enter a command in the **Serial Command** field and press **F4** to send it to t
 | `m` | Rotate to attenuated object position |
 | `n` | Rotate to no-object position |
 | `<int>` | Move linear motor by N mm (negative value = backward) |
-| `r<int>` | Rotate stepper motor by N degrees |
-| `c<int>` | Set catch trial distance: how many mm short of the whisker-contact position the motor stops. Default: `10` |
+| `r<int>` | Move stepper motor by N raw steps |
+| `c<int>` | Set catch trial distance: how many mm short of the whisker-contact position the motor stops. Default: `18` |
