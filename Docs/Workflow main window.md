@@ -31,7 +31,8 @@
 | **F10** | Load animal by ID |
 | **F12** | Start / restart training session |
 | **Shift+A** | Rotate object holder to aluminum foil position |
-| **Shift+F** | Send linear motor to home (starting) position |
+| **Shift+B** | Reset motor to home (starting) position |
+| **Shift+F** | Move motor to whisker position |
 | **Shift+W** | Manually trigger water reward |
 
 ---
