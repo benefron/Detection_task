@@ -63,7 +63,7 @@ Before running sessions on a new PC or rig, update the machine-specific settings
 
 ## Loading and Verifying Settings
 
-24. Send the motor to the home position with **Shift+F**.
+24. Send the motor to the home position with the **reset/back** command.
 25. Load the animal with **F10**.
 26. Open the settings node and verify the loaded parameters match the expected configuration.
 27. Open the lick report node, press **Shift+W** to release water, and confirm licks are being recorded.
