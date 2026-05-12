@@ -51,24 +51,21 @@ By comparing hit rates and false alarm rates across stimulus conditions, the tas
 │  │  Difficulty/    │  │  CSV logs  │  │  Water valve │  │
 │  │  Catch trials   │  │  Settings  │  │  Camera      │  │
 │  └─────────────────┘  └────────────┘  └──────────────┘  │
-└───────────────────────────┬──────────────────────────────┘
-                            │ Firmata / Serial
-               ┌────────────┴───────────┐
-               │      Teensy 4.0 #1     │
-               │    (Firmata bridge)    │
-               └────────────┬───────────┘
-                            │ Serial commands
-               ┌────────────┴───────────┐
-               │      Teensy 4.0 #2     │
-               │   (Motor controller)   │
-               │  ┌──────────────────┐  │
-               │  │  Stepper Motor   │  │
-               │  │ (Object rotation)│  │
-               │  ├──────────────────┤  │
-               │  │  Linear Motor    │  │
-               │  │ (Whisker contact)│  │
-               │  └──────────────────┘  │
-               └────────────────────────┘
+└──────────────────────┬───────────────────────┬───────────┘
+                       │                       │
+             Firmata (COM9)          Motor serial (COM15)
+                       │                       │
+        ┌──────────────┴──────────────┐   ┌────┴────────────────────┐
+        │        Teensy 4.0 #1        │   │      Teensy 4.0 #2      │
+        │   (Firmata / digital I/O)   │   │   (Motor controller)    │
+        │  Lick sensor, water valve,  │   │  ┌──────────────────┐   │
+        │  camera and sync I/O        │   │  │  Stepper Motor   │   │
+        └──────────────┬──────────────┘   │  │ (Object rotation)│   │
+                       │                  │  ├──────────────────┤   │
+                       │ Optional GPIO    │  │  Linear Motor    │   │
+                       │ sync/status      │  │ (Whisker contact)│   │
+                       └──────────────────┤  └──────────────────┘   │
+                                          └─────────────────────────┘
 ```
 
 **Hardware components controlled:**
