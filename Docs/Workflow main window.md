@@ -12,7 +12,8 @@
 | **Count Non** | Window size (number of trials) for the running average of the no-object false alarm rate graph. |
 | **Water Per Drop** | The calibrated water volume (µL) delivered per reward event. |
 | **Water Reward** | Duration the solenoid valve stays open per reward (determines water volume delivered). |
-| **White Noise** | Duration of white noise playback during no-object and catch trials. |
+| **White Noise** | Duration of white noise playback when white noise is triggered on eligible no-object and catch trials. |
+| **White Noise %** | Fraction of eligible no-object and catch trials that play white noise. This parameter controls whether white noise occurs on a given trial; if it does, **White Noise** sets the playback duration. |
 
 > **Loading a new animal:** Enter the animal ID and press **F10**.
 > On first load for a brand-new animal, the workflow should create the animal folder and default `Settings.csv` automatically.
